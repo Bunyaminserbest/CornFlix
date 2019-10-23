@@ -1,12 +1,29 @@
 <?php
+// connection à la base de donnée
 function connect_db(){
   try
   {
-    $bdd =new PDO('mysql:host=localhost2:3306;dbname=id11312830_cornflix', 'root', '');
+    $db =new PDO('mysql:host=localhost;dbname=cornflix', 'root', '');
+    return $db;
   }
   catch(Exception $e)
   {
           die('Erreur : '.$e->getMessage());
   }
 }
-?>
+// requêtes sql pour le login
+function loginSql(){
+  $db = connect_db();
+  $data=[':username'=>$_POST['username']];
+  $query="SELECT * FROM login WHERE username = :username";
+  $statement=$db->prepare($query);
+  $statement->execute($data);
+  $count=$statement->rowCount();
+    if($count>0){
+      $result=$statement->fetchAll();
+    return $result;
+  } else {
+    $message = '<label> wrong username </label>';
+    return $message;
+  }
+}

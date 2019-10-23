@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?= $title ?></title>
-</head>
-<body>
-    <header></header>
-    
-    <section>
-        <?= $content ?>
-    </section>
-
-
-    <footer></footer>
-</body>
-</html>
+<?php
+require('./controller/controller.php');
+if(isset($_SESSION['user_id'])){
+    header('location:./view/indexView.php');
+  } else if(isset($_GET['action'])){
+if($_GET['action']== 'login'){
+    login();
+}
+}else{
+    login();
+}
