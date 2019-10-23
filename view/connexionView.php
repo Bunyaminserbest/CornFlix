@@ -1,9 +1,9 @@
 
 <?php 
-
+$title= 'login'; 
 include('header.php');
 $message = '';
-$title= 'login'; 
+
  ?>
 <h1 class="text-center pt-3">Sign-in</h1>
 

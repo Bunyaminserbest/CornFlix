@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(80, 92, 104);
+    width: 100%;
+    height: 100vh;
+  
+  }
+  
+  .searchBtn {
+    height: 37px;
+    color: white;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+  }
+  
+  .submitBtn {
+    color: white;
+    background-color: orange;
+    padding: 10px 88px !important;
+  }
+  
+  .footerBgrd {
+    background-color: white;
+  }
+  
+  li {
+    list-style: none;
+    margin: auto;
+    font-size: small;
+  }
+  
+  ul {
+    width: 50%;
+    margin: auto;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  a:hover {
+    color: orange;
+  }

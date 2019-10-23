@@ -8,5 +8,5 @@ if($_GET['action']== 'login'){
     login();
 }
 }else{
-    header('location:view/landing.php');
+    require('./view/landing.php');
 }
