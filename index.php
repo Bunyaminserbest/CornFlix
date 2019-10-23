@@ -1,11 +1,12 @@
 <?php
 require('./controller/controller.php');
+session_start();
 if(isset($_SESSION['user_id'])){
-    header('location:./view/indexView.php');
+    require('./view/indexView.php');
   } else if(isset($_GET['action'])){
 if($_GET['action']== 'login'){
     login();
 }
 }else{
-    login();
+    header('location:view/landing.php');
 }
