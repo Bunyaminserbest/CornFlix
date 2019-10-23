@@ -1,60 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Connexion</title>
-</head>
-<body>
 
-<form action="action_page.php" method="post">
+<?php 
+$title= 'login'; 
+include('header.php');
+$message = '';
 
-  <div class="container">
+ ?>
+<h1 class="text-center pt-3">Sign-in</h1>
 
-    <label for="uname">Username</label>
-    <input type="text" placeholder="Enter Username" name="uname" required><br/>
+<!-- FORMULAIRE DE LOGIN -->
 
-    <label for="psw">Password</label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br/>
-
-    <button type="submit">Login</button>
-    
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-
+<form action="" method="POST" class="d-flex flex-column align-items-center pt-3">
+  
+  <div class="form-group "  >
+    <label for="username">Enter your username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="username">
   </div>
-
+  <div class="form-group ">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  </div>
+  <p><?=$message; ?></p>
+  <div class="form-group form-check ">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Show password</label>
+  </div>
+  <div class="form-group form-check ">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Keep me signed-in</label>
+  </div>
+  <button type="submit" class="btn   submitBtn" name="login">Submit</button>
 </form>
+<?php  
+  include('footer.php');?>
 
-  <?php 
-
-//  Récupération de l'utilisateur et de son pass hashé
-$passU_rec = $bdd->prepare('SELECT id, password FROM login WHERE pseudo = :pseudo');
-$passU_rec->execute(array(
-    'pseudo' => $pseudo));
-$resultat = $passU_rec->fetch();
-
-// Comparaison du pass envoyé via le formulaire avec la base
-$isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
-
-if (!$resultat)
-{
-    echo 'Mauvais identifiant ou mot de passe !';
-}
-else
-{
-    if ($isPasswordCorrect) {
-        session_start();
-        $_SESSION['id'] = $resultat['id'];
-        $_SESSION['pseudo'] = $pseudo;
-        echo 'Vous êtes connecté !';
-    }
-    else {
-        echo 'Mauvais identifiant ou mot de passe !';
-    }
-}
-?>
-</body>
-</html>
