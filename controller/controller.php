@@ -13,7 +13,7 @@ function login(){
            $_SESSION['user_id']=$row['user_id'];
            
           $_SESSION['username']=$row['username'];
-         header('location:./view/indexView.php');
+         header('location:./index.php?action=home');
         } else {
         
           $message = ' wrong password';
