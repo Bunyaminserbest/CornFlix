@@ -12,6 +12,8 @@ if ($user_id) {
         require('./view/indexView.php');
     }else if ($_GET['action'] == 'cgv'){
         require('./view/cgvView.php');
+    }else if($_GET['action'] == 'subscribe'){
+        subscribe();
     }
 } else {
     require('./view/landing.php');

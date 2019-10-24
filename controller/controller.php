@@ -29,3 +29,23 @@ function login(){
   }
   require_once('./view/connexionView.php');
 }
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+function subscribe(){
+  if(isset($_POST['name'])){
+    $data = [
+      ':name' => test_input($_POST['name']),
+      ':lastname' => test_input($_POST['lastname']),
+      ':email' => test_input($_POST['email']),
+      ':username' => test_input($_POST['username']),
+      ':password' => test_input(password_hash($_POST['password'], PASSWORD_DEFAULT)),
+    ];
+    $statement = subscribeSql($data);
+    header('location:./index.php?action=login');
+  }
+  require('./view/subscribeView.php');
+}
