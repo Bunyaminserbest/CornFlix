@@ -2,27 +2,27 @@
 
 <footer class="container-fluid  footerBgrd mt-5 pt-3 pb-3">
 
-  <ul class="d-flex">
-    <li >
+  <ul class="d-flex navUl">
+    <li class="navLi">
       <a href=""><i class="fab fa-facebook-square fa-2x  "></i></a>
     </li>
-    <li>
+    <li class="navLi">
       <a href=""><i class="fab fa-twitter-square fa-2x"></i></a>
     </li>
-    <li>
+    <li class="navLi">
     <a href=""><i class="fab fa-instagram fa-2x"></i></a>
     </li>
   </ul>
 
-  <ul class="d-flex">
-    <li class="pt-1">
+  <ul class="d-flex navUl">
+    <li class="pt-1 navLi">
       <a href="./index.php?action=cgv">CVG</a>
     </li>
-    <li class="pt-1">
-      <a href="">Contact-us</a>
+    <li class="pt-1 navLi">
+      <a href="./index.php?action=Contact-us">Contact-us</a>
     </li>
-    <li class="pt-1">
-      <a href="">FAQ</a>
+    <li class="pt-1 navLi">
+      <a href="./index.php?action=faq">FAQ</a>
     </li>
   </ul>
 

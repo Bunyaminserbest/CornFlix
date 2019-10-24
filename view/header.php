@@ -22,11 +22,11 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+    <ul class="navbar-nav mr-auto navUl">
+      <li class="nav-item active navUl">
         <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown navUl">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Films
         </a>
@@ -36,7 +36,7 @@
           <a class="dropdown-item" href="https://www.youtube.com/?gl=BE&hl=fr">Drama</a>
         </div>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown navUl">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Series
         </a>
@@ -52,5 +52,16 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="my-2 my-sm-0 searchBtn" type="submit">Search</button>
     </form>
+
+    <div class="dropdown">
+     <button style="color:grey;" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" ><i class="fas fa-user fa-2x" ></i></a>
+     </button>
+     <div class="dropdown-menu">
+      <a class="dropdown-item" href="./index.php?action=login">Sign-in</a>
+      <a class="dropdown-item" href="./index.php?action=profil">My profil</a>
+      <a class="dropdown-item" href="#">My list</a>
+      <a class="dropdown-item" href="#">Logout</a>
+    </div>
+
   </div>
 </nav>
