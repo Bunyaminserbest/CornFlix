@@ -29,3 +29,10 @@ function login(){
   }
   require_once('./view/connexionView.php');
 }
+function subscribe(){
+  if(isset($_POST['name'])){
+    var_dump($_POST['name']);
+    $statement = subscribeSql();
+  }
+  require('./view/subscribeView.php');
+}

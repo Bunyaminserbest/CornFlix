@@ -5,7 +5,7 @@ include('header.php')
 <form action="" method="post" class="d-flex flex-column align-items-center pt-3">
 <section class="form-group">
 <label for="firstname">Name : </label>
-<input type="text" class="form-control px-4" id="name" placeholder="Enter your name" name="firstname">
+<input type="text" class="form-control px-4" id="name" placeholder="Enter your name" name="name">
 </section>
 <section class="form-group">
 <label for="lastname">Lastname :</label>
@@ -35,7 +35,7 @@ include('header.php')
 <input type="checkbox" class="form-check-input" id="acceptCGV" name="acceptCGV">
 <label class="form-check-label" for="acceptCGV">I have read and accpet the <a href="./index.php?action=cgv">CGV</a></label>
 </section>
-<button type="submit" class="btn   submitBtn" name="login">Submit</button>
+<button type="submit" class="btn   submitBtn" name="submit">Submit</button>
 
 </form>
 <?php

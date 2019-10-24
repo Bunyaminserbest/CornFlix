@@ -13,7 +13,7 @@ if ($user_id) {
     }else if ($_GET['action'] == 'cgv'){
         require('./view/cgvView.php');
     }else if($_GET['action'] == 'subscribe'){
-        require('./view/subscribeView.php');
+        subscribe();
     }
 } else {
     require('./view/landing.php');
