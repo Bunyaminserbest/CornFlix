@@ -1,0 +1,20 @@
+#list>img{
+      padding: 1%;
+      
+}*/
+.carousel-item {
+      position: relative;
+      display: flex;
+      float: left;
+      /* width: 100%; */
+      margin-right: -100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: -webkit-transform .6s ease-in-out;
+      transition: transform .6s ease-in-out;
+      transition: transform .6s ease-in-out,-webkit-transform .6s;
+}
+.carousel-item.active {
+      display: flex;
+      
+}
