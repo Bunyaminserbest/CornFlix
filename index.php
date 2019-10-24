@@ -18,7 +18,10 @@ if ($user_id) {
         require('./view/contactView.php');
     }elseif ($_GET['action']== 'profil'){
         require('./view/profileView.php');
-} else {
+    }else if($_GET['action'] == 'subscribe'){
+        subscribe();
+    }
+ else {
     require('./view/landing.php');
 }
 }
