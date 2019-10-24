@@ -45,3 +45,9 @@ a:hover {
 .hgtTxtArea {
   height: 150px;
 }
+.btn-nav {
+  color: white;
+  background-color: orange;
+  padding: 5px 50px !important;
+  margin: 0px 10px;
+}

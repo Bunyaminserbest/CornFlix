@@ -89,8 +89,9 @@ include('header.php');
         document.getElementById(`poster${i}`).src = "https://image.tmdb.org/t/p/w200/" + movies[i].poster_path
       }
     }
-    window.onload = details()
+   // window.onload = details()
     </script>
 
-</body>
-</html>
+<?php
+include('footer.php')
+?>

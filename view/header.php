@@ -50,7 +50,8 @@
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <?php if(isset($_SESSION['user_id'])){
+      echo '<form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="my-2 my-sm-0 searchBtn" type="submit">Search</button>
     </form>
@@ -62,8 +63,13 @@
       <a class="dropdown-item" href="./index.php?action=login">Sign-in</a>
       <a class="dropdown-item" href="./index.php?action=profil">My profil</a>
       <a class="dropdown-item" href="#">My list</a>
-      <a class="dropdown-item" href="#">Logout</a>
+      <a class="dropdown-item" href="./view/logout.php">Logout</a>
     </div>
 
-  </div>
-</nav>
+  </div>';
+    }else{
+echo '<a href="./index.php?action=login" class="btn btn-nav">login</a>
+<a href="./index.php?action=subscribe" class="btn btn-nav">inscription</a>';
+    }
+    ?>
+    </nav>

@@ -2,9 +2,7 @@
 $title = 'cgv';
 include('header.php')
 ?>
-<?php
-include('footer.php')
-?>
+
 <div class="container p-5">
 <h1>Condition Générale de vente</h1>
 
@@ -68,3 +66,6 @@ include('footer.php')
 
 <p>Si l'une des dispositions dans les présentes Conditions est jugée par un tribunal de juridiction compétente comme étant illégale, non valide ou inexécutable, cette disposition sera modifiée et interprétée de manière à remplir au mieux les objectifs de la disposition d'origine dans toute la mesure autorisée par la loi, et les dispositions restantes demeureront pleinement applicables et conserveront leurs effets.</p>
 </div>
+<?php
+include('footer.php')
+?>
