@@ -2,9 +2,7 @@
 $title = 'Contact-us';
 include('header.php')
 ?>
-<?php
-include('footer.php')
-?>
+
 
 <div class="container p-5">
 
@@ -37,3 +35,6 @@ include('footer.php')
   <button type="submit" class="btn   submitBtn" name="login">Submit</button>
 </form>
 </div>
+<?php
+include('footer.php')
+?>

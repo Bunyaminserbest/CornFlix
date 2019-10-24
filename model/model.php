@@ -29,7 +29,7 @@ function loginSql()
 function subscribeSql($data)
 {
   $db = connect_db();
-  
+
   $query = "INSERT INTO login
   (name,lastname,email,username,password)
   VALUES (:name,:lastname,:email,:username,:password)";

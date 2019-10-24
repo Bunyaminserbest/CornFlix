@@ -2,9 +2,7 @@
 $title = 'Contact-us';
 include('header.php')
 ?>
-<?php
-include('footer.php')
-?>
+
 
 <div class="p-5">
 
@@ -76,3 +74,6 @@ include('footer.php')
 </div>
 
 </div>
+<?php
+include('footer.php')
+?>

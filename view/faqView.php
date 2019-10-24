@@ -2,9 +2,6 @@
 $title = 'FAQ';
 include('header.php')
 ?>
-<?php
-include('footer.php')
-?>
 
 <div class="container p-5">
 <h1>Service d'aide</h1>
@@ -53,3 +50,6 @@ include('footer.php')
     <h3>Comment activer/désactiver les sous-titres, le sous-titrage pour sourds et malentendants et l'audio dans une autre langue ?</h3>
 
 </div>
+<?php
+include('footer.php')
+?>
