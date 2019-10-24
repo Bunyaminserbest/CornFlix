@@ -44,8 +44,12 @@ function subscribe(){
       ':username' => test_input($_POST['username']),
       ':password' => test_input(password_hash($_POST['password'], PASSWORD_DEFAULT)),
     ];
+    if($_POST['password'] == $_POST['Confirmpassword']){
     $statement = subscribeSql($data);
     header('location:./index.php?action=login');
+  }else{
+    require('./view/subscribeView.php');
+  }
   }
   require('./view/subscribeView.php');
 }
