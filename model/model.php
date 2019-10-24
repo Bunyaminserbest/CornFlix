@@ -26,16 +26,10 @@ function loginSql()
     return $message;
   }
 }
-function subscribeSql()
+function subscribeSql($data)
 {
   $db = connect_db();
-  $data = [
-    ':name' => $_POST['name'],
-    ':lastname' => $_POST['lastname'],
-    ':email' => $_POST['email'],
-    ':username' => $_POST['username'],
-    ':password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-  ];
+  
   $query = "INSERT INTO login
   (name,lastname,email,username,password)
   VALUES (:name,:lastname,:email,:username,:password)";
