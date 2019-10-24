@@ -1,6 +1,6 @@
 <?php
 $title = 'Subcribe';
-include('header.php')
+include('header.php');
 ?>
 <form action="" method="post" class="d-flex flex-column align-items-center pt-3">
 <section class="form-group">
@@ -20,6 +20,8 @@ include('header.php')
 <input type="text" class="form-control px-4" id="username" placeholder="" name="username" required>
 </section>
 <section id=pass class="form-group">
+    <?php if(isset($message)){
+        echo $message;}?>
 <label for="password">Password :</label>
 <input type="password" class="form-control px-4" id="password" placeholder="" name="password" required>
 </section>
@@ -35,18 +37,10 @@ include('header.php')
 <input type="checkbox" class="form-check-input" id="acceptCGV" name="acceptCGV"required>
 <label class="form-check-label" for="acceptCGV">I have read and accpet the <a href="./index.php?action=cgv">CGV</a></label>
 </section>
-<button type="submit" class="btn   submitBtn" name="submit" onclick="checkPassword()">Submit</button>
+<button type="submit" class="btn   submitBtn" name="submit" >Submit</button>
 
 </form>
-<script>
-function checkPassword(){
-let pass= document.getElementById('password').value
-let pass2 = document.getElementById('password2').value
-if(pass != pass2){
-document.getElementById('pass').innerHTML = document.getElementById('pass')+'<p class="text-danger">password not match</p>'
-}
-}
-</script>
+
 <?php
 include('footer.php')
 ?>

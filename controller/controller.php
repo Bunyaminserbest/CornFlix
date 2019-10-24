@@ -3,10 +3,10 @@ require('./model/model.php');
 function login(){
     if(isset($_POST['login'])){
         
-    $result = loginSql();
+    $message = loginSql();
     //verifie que $result est bien un tableau si oui parcours et enregistre la session
-    if(is_array($result)){
-    foreach($result as $row){
+    if(is_array($message)){
+    foreach($message as $row){
         
         // verifie le mot de passe et sauvegarde les infos de sessions
         if(password_verify($_POST['password'],$row['password'])){
@@ -17,15 +17,15 @@ function login(){
         } else {
         
           $message = ' wrong password';
-          echo $message;
+          
           
           require_once('./view/connexionView.php');
         }
       }
     }else{
-        echo $result;
-        require_once('./view/connexionView.php');    
-    }
+         $message;
+         require_once('./view/connexionView.php');    
+     }
   }
   require_once('./view/connexionView.php');
 }
@@ -48,7 +48,8 @@ function subscribe(){
     $statement = subscribeSql($data);
     header('location:./index.php?action=login');
   }else{
-    require('./view/subscribeView.php');
+    $message = '<p class="text-danger">password not match</p>';
+   // require('./view/subscribeView.php');
   }
   }
   require('./view/subscribeView.php');
