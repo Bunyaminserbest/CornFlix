@@ -1,16 +1,14 @@
-#list>img, #list2>img{
-      padding: 2%;
+img{
+padding: 2%;
 }
 
-#list{
+/*.carousel-items{
       justify-content: center;
-}
-*/
-.carousel-item {
+}*/
+
+.test {
       position: relative;
-      display: flex;
       float: left;
-      /* width: 100%; */
       margin-right: -100%;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -22,3 +20,15 @@
       display: flex;
       
 }
+.carousel-inner>div{
+      justify-content: center;
+}
+
+.section{
+      display: flex;
+      flex-direction: column;
+}
+/*#carousels{
+      display: flex;
+      flex-direction: column !important;
+}*/
