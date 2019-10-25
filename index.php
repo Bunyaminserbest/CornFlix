@@ -3,7 +3,7 @@
 require('./controller/controller.php');
 session_start();
 $user_id = isset($_SESSION['user_id']);
-if ($user_id) {
+if ($user_id && isset($_GET['action'])) {
     if ($_GET['action'] == 'home') {
         require('./view/indexView.php');
     }else if ($_GET['action'] == 'cgv'){
@@ -14,6 +14,10 @@ if ($user_id) {
         require('./view/contactView.php');
     }elseif ($_GET['action']== 'profil'){
         require('./view/profileView.php');
+    }else if($_GET['action'] == 'category'){
+        require('./view/categoryView.php');
+    }else if($_GET['action'] == 'player'){
+        require('./view/playerView.php');
     }else{
     require('./view/indexView.php');
 }
@@ -30,6 +34,8 @@ if ($user_id) {
         require('./view/profileView.php');
     }else if($_GET['action'] == 'subscribe'){
         subscribe();
+    }else if($_GET['action'] == 'category'){
+        require('./view/categoryView.php');
     }}
  else {
     require('./view/landing.php');
