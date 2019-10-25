@@ -33,7 +33,7 @@ CREATE TABLE `comment` (
   `id_movie` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `comment` varchar(500) NOT NULL,
-  `date` date NOT NULL DEFAULT current_timestamp()
+  `date` date NOT NULL DEFAULT timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

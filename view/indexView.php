@@ -25,7 +25,7 @@ include('header.php');
 
 
     </div>
-    <div class="carousel-item">
+    <div id="list2" class="carousel-item">
     <img id= "poster6" src="" class="d-block" alt="">
     <img id= "poster7" src="" class="d-block" alt="">
     <img id= "poster8" src="" class="d-block" alt="">
@@ -34,8 +34,8 @@ include('header.php');
     <img id= "poster11" src="" class="d-block" alt="">
     </div>
     
-    <div class="carousel-item">
-    <img src="..." class="d-block w-100" alt="...">
+    <div id="liste3" class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

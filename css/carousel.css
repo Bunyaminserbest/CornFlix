@@ -1,7 +1,11 @@
-#list>img{
-      padding: 1%;
-      
-}*/
+#list>img, #list2>img{
+      padding: 2%;
+}
+
+#list{
+      justify-content: center;
+}
+*/
 .carousel-item {
       position: relative;
       display: flex;
