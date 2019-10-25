@@ -14,6 +14,10 @@ if ($user_id) {
         require('./view/contactView.php');
     }elseif ($_GET['action']== 'profil'){
         require('./view/profileView.php');
+    }else if($_GET['action'] == 'category'){
+        require('./view/categoryView.php');
+    }else if($_GET['action'] == 'player'){
+        require('./view/playerView.php');
     }else{
     require('./view/indexView.php');
 }
@@ -30,6 +34,8 @@ if ($user_id) {
         require('./view/profileView.php');
     }else if($_GET['action'] == 'subscribe'){
         subscribe();
+    }else if($_GET['action'] == 'category'){
+        require('./view/categoryView.php');
     }}
  else {
     require('./view/landing.php');
