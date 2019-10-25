@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 22 oct. 2019 à 10:44
+-- Généré le :  ven. 25 oct. 2019 à 09:41
 -- Version du serveur :  10.3.15-MariaDB
 -- Version de PHP :  7.1.30
 
@@ -43,19 +43,25 @@ CREATE TABLE `comment` (
 --
 
 CREATE TABLE `login` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(5) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `rank` int(2) NOT NULL DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `login`
 --
 
-INSERT INTO `login` (`user_id`, `username`, `password`) VALUES
-(1, 'admin', '$2y$10$9CS4r4iFLfhva.5xvQAEOeLm4ig/Im0YMo3fRqcDSiAGMNCQJFV6G'),
-(3, 'bunyamin', '$2y$10$9CS4r4iFLfhva.5xvQAEOeLm4ig/Im0YMo3fRqcDSiAGMNCQJFV6G'),
-(5, 'kevin', '$2y$10$9CS4r4iFLfhva.5xvQAEOeLm4ig/Im0YMo3fRqcDSiAGMNCQJFV6G');
+INSERT INTO `login` (`user_id`, `name`, `lastname`, `email`, `username`, `password`, `rank`) VALUES
+(1, 'admin', 'Kornflix', 'admin@kornflix.be', 'admin', '$2y$10$9CS4r4iFLfhva.5xvQAEOeLm4ig/Im0YMo3fRqcDSiAGMNCQJFV6G', 1),
+(2, 'Serbest', 'Bunyamin', 'bunyamin.srbst@gmail.com', 'bunyamin', '$2y$10$9CS4r4iFLfhva.5xvQAEOeLm4ig/Im0YMo3fRqcDSiAGMNCQJFV6G', 2),
+(3, 'Ryckaert', 'Kevin', 'ryckaertkevin@gmail.com', 'kevin', '$2y$10$9CS4r4iFLfhva.5xvQAEOeLm4ig/Im0YMo3fRqcDSiAGMNCQJFV6G', 2),
+(8, 'Hanon', 'MikhaÃ¯l', 'mike.hanon@gmail.com', 'kimaosama', '$2y$10$UjAKZA.kx0Lb8fmMRaUZcejYrUUOS28dQbHkBgnNg44.l4rBIKNJi', 2),
+(9, 'personne', 'paul', 'personne@paul.com', 'personne', '$2y$10$N2zR4HmB0DpsJk5f09IW7OrcUe/dTGawQGaI6mLcv/KEMddu66CTC', 2);
 
 --
 -- Index pour les tables déchargées
@@ -87,7 +93,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT pour la table `login`
 --
 ALTER TABLE `login`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

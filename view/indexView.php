@@ -35,7 +35,7 @@ include('header.php');
     </div>
     
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+    <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
