@@ -12,7 +12,7 @@ include('header.php');
 
 
 <!--Carousel Movies-->
-<div id="carouselMovies" class="carousel slide" data-ride="carousel">
+<div id="carouselMovies" class="carousel slide" >
   <div class="carousel-inner">
     <div id="movie1" class="carousel-item test active"></div>
     <div id="movie2" class="carousel-item test"></div>
@@ -35,7 +35,7 @@ include('header.php');
 <h1>SERIES</h1>
 <!--Carousel tvShow-->
 
-<div id="carouselTvShow" class="carousel slide" data-ride="carousel">
+<div id="carouselTvShow" class="carousel slide" ">
   <div class="carousel-inner">
     
     <div id="tvShow1" class="carousel-item test active"></div>
