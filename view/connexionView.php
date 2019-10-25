@@ -2,7 +2,7 @@
 <?php 
 $title= 'login'; 
 include('header.php');
-$message = '';
+
 
  ?>
 <h1 class="text-center pt-3">Sign-in</h1>
@@ -19,7 +19,8 @@ $message = '';
     <label for="password">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
   </div>
-  <p><?=$message; ?></p>
+  <p class="text-danger"><?php if(isset($message)){
+        echo $message;}?></p>
   <div class="form-group form-check ">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Show password</label>
