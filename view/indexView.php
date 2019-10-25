@@ -11,42 +11,66 @@ include('header.php');
 <h1>MOVIES</h1>
 <h2 id="ij">cat</h2>
 
-
-
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div id="list" class="carousel-item active">
-      <img id= "poster0" src="" class="d-block" alt="">
-      <img id= "poster1" src="" class="d-block" alt="">
-      <img id= "poster2" src="" class="d-block" alt="">
-      <img id= "poster3" src="" class="d-block" alt="">
-      <img id= "poster4" src="" class="d-block" alt="">
-      <img id= "poster5" src="" class="d-block" alt="">
-
-
-    </div>
-    <div id="list2" class="carousel-item">
-    <img id= "poster6" src="" class="d-block" alt="">
-    <img id= "poster7" src="" class="d-block" alt="">
-    <img id= "poster8" src="" class="d-block" alt="">
-    <img id= "poster9" src="" class="d-block" alt="">
-    <img id= "poster10" src="" class="d-block" alt="">
-    <img id= "poster11" src="" class="d-block" alt="">
-    </div>
+<section class="container">
+<!--Carousel Movies-->
+  <div class="row">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
     
-    <div id="liste3" class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <div id="movie1" class="carousel-item test active"></div>
+      <div id="movie2" class="carousel-item test"></div>
+      <div id="movie3" class="carousel-item test"></div>
+      <div id="movie4" class="carousel-item test"></div>
+    
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  </div>
+<!--Carousel tvShow-->
+<div class="row">
+<div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    
+    <div id="tvShow1" class="carousel-item active"></div>
+    <div id="tvShow2" class="carousel-item"></div>
+    <div id="tvShow3" class="carousel-item"></div>
+    <div id="tvShow4" class="carousel-item"></div>
+  
+  <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
+</div>
+</div>
+-->
+</section>
+<section id="genres">
+  <div class="action"></div>
+  <div class="adventure"></div>
+  <div class="animation"></div>
+  <div class="comedy"></div>
+  <div class="crime"></div>
+  <div class="documentary"></div>
+  <div class="drama"></div>
+  <div class="family"></div>
+  <div class="fantasy"></div>
+  <div class="history"></div>
+  <div class="horror"></div>
+  <div class="music"></div>
+</section> 
+
 
 <script>
    /* function details() {
@@ -78,18 +102,52 @@ include('header.php');
 
       xhr.send(data);
     }*/
+
+    /*FETCH MOVIES API*/
     fetch("https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US")
+    .then(response => response.json())
+    .then(data=> {
+      getPoster(data.results)
+    })
+    function getPoster(movies){
+      for(i=0; i<20; i++){
+        if (i<5){
+          document.getElementById(`movie1`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }else if (i<10){
+          document.getElementById(`movie2`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }else if(i<15){
+          document.getElementById(`movie3`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }else{
+          document.getElementById(`movie4`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }
+      }
+    }
+   
+
+   /*FETCH TVSHOW API*/
+   fetch("https://api.themoviedb.org/3/discover/tv?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US")
     .then(response => response.json())
     .then(data=> {
       console.log(data)
       getPoster(data.results)
     })
     function getPoster(movies){
-      for(i=0; i<12; i++){
-        document.getElementById(`poster${i}`).src = "https://image.tmdb.org/t/p/w200/" + movies[i].poster_path
+      for(i=0; i<20; i++){
+        if (i<5){
+          document.getElementById(`tvShow1`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }else if (i<10){
+          document.getElementById(`tvShow2`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }else if(i<15){
+          document.getElementById(`tvShow3`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }else{
+          document.getElementById(`tvShow4`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+        }
       }
     }
-   // window.onload = details()
+    
+    getapi()
+
+
     </script>
 
 <?php
