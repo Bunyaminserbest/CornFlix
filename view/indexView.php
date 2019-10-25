@@ -9,53 +9,55 @@ include('header.php');
 
 
 <h1>MOVIES</h1>
-<h2 id="ij">cat</h2>
 
-<section class="container">
+
 <!--Carousel Movies-->
-  <div class="row">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
+<div id="carouselMovies" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div id="movie1" class="carousel-item test active"></div>
+    <div id="movie2" class="carousel-item test"></div>
+    <div id="movie3" class="carousel-item test"></div>
+    <div id="movie4" class="carousel-item test"></div>
     
-      <div id="movie1" class="carousel-item test active"></div>
-      <div id="movie2" class="carousel-item test"></div>
-      <div id="movie3" class="carousel-item test"></div>
-      <div id="movie4" class="carousel-item test"></div>
-    
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    <a class="carousel-control-prev" href="#carouselMovies" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselMovies" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  </div>
+</div>
+
+  
+  
+<h1>SERIES</h1>
 <!--Carousel tvShow-->
-<div class="row">
-<div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+
+<div id="carouselTvShow" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     
-    <div id="tvShow1" class="carousel-item active"></div>
-    <div id="tvShow2" class="carousel-item"></div>
-    <div id="tvShow3" class="carousel-item"></div>
-    <div id="tvShow4" class="carousel-item"></div>
+    <div id="tvShow1" class="carousel-item test active"></div>
+    <div id="tvShow2" class="carousel-item test"></div>
+    <div id="tvShow3" class="carousel-item test"></div>
+    <div id="tvShow4" class="carousel-item test"></div>
   
-  <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <a class="carousel-control-prev" href="#carouselTvShow" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselTvShow" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
 </div>
-</div>
-</div>
+
+
 -->
-</section>
+
 <section id="genres">
   <div class="action"></div>
   <div class="adventure"></div>
@@ -69,7 +71,7 @@ include('header.php');
   <div class="history"></div>
   <div class="horror"></div>
   <div class="music"></div>
-</section> 
+
 
 
 <script>
@@ -129,9 +131,9 @@ include('header.php');
     .then(response => response.json())
     .then(data=> {
       console.log(data)
-      getPoster(data.results)
+      gettvShow(data.results)
     })
-    function getPoster(movies){
+    function gettvShow(movies){
       for(i=0; i<20; i++){
         if (i<5){
           document.getElementById(`tvShow1`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
@@ -145,7 +147,7 @@ include('header.php');
       }
     }
     
-    getapi()
+ 
 
 
     </script>

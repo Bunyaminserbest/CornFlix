@@ -1,5 +1,5 @@
-#movie1>img, #movie2>img, #movie3>img, #movie4>img{
-      padding: 2%;
+img{
+padding: 2%;
 }
 
 /*.carousel-items{
@@ -23,9 +23,7 @@
 .carousel-inner>div{
       justify-content: center;
 }
-.row{
-      justify-content: center;
-}
+
 .section{
       display: flex;
       flex-direction: column;
