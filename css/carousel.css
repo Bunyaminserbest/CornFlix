@@ -1,5 +1,5 @@
 img{
-padding: 2%;
+padding: 1%;
 }
 
 /*.carousel-items{
@@ -27,6 +27,9 @@ padding: 2%;
 .section{
       display: flex;
       flex-direction: column;
+}
+.genres{
+      justify-content: center;
 }
 /*#carousels{
       display: flex;

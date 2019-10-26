@@ -56,25 +56,26 @@ include('header.php');
 </div>
 
 
--->
 
-<section id="genres">
-  <div class="action"></div>
-  <div class="adventure"></div>
-  <div class="animation"></div>
-  <div class="comedy"></div>
-  <div class="crime"></div>
-  <div class="documentary"></div>
-  <div class="drama"></div>
-  <div class="family"></div>
-  <div class="fantasy"></div>
-  <div class="history"></div>
-  <div class="horror"></div>
-  <div class="music"></div>
+
+<section id="genres" ">
+  <div id="action" class="row"><h3>Action</h3><a href="index.php?action=category&id=28">See more...</a></div>
+  <div id="adventure"><h3>Adventure</h3><a href="index.php?action=category&id=12">See more...</a></div>
+  <div id="animation"><h3>Animation</h3><a href="index.php?action=category&id=16">See more...</a></div>
+  <div id="comedy"><h3>Comedy</h3><a href="index.php?action=category&id=35">See more...</a></div>
+  <div id="crime"><h3>Crime</h3><a href="index.php?action=category&id=80">See more...</a></div>
+  <div id="documentary"><h3>Documentary</h3><a href="index.php?action=category&id=99">See more...</a></div>
+  <div id="drama"><h3>Drama</h3><a href="index.php?action=category&id=28">See more...</a></div>
+  <div id="family"><h3>Family</h3><a href="index.php?action=category&id=10751">See more...</a></div>
+  <div id="fantasy"><h3>Fantasy</h3><a href="index.php?action=category&id=14">See more...</a></div>
+  <div id="history"><h3>History</h3><a href="index.php?action=category&id=36">See more...</a></div>
+  <div id="horror"><h3>Horror</h3><a href="index.php?action=category&id=27">See more...</a></div>
+  <div id="music"><h3>Music</h3><a href="index.php?action=category&id=10402">See more...</a></div>
 
 
 
 <script>
+  
    /* function details() {
       var data = "{}";
 
@@ -109,9 +110,9 @@ include('header.php');
     fetch("https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US")
     .then(response => response.json())
     .then(data=> {
-      getPoster(data.results)
+      getMovie(data.results)
     })
-    function getPoster(movies){
+    function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
           document.getElementById(`movie1`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
@@ -130,10 +131,10 @@ include('header.php');
    fetch("https://api.themoviedb.org/3/discover/tv?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US")
     .then(response => response.json())
     .then(data=> {
-      console.log(data)
-      gettvShow(data.results)
+      
+      getTvshow(data.results)
     })
-    function gettvShow(movies){
+    function getTvshow(movies){
       for(i=0; i<20; i++){
         if (i<5){
           document.getElementById(`tvShow1`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
@@ -146,8 +147,33 @@ include('header.php');
         }
       }
     }
-    
- 
+
+
+    function getCategory(id,nbrToShow, category){
+      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&&with_genres=${id}`)
+      .then(response => response.json())
+      .then(data=> {
+      console.log(data)
+      showCategory(data.results, nbrToShow, category)
+    })}
+    function showCategory(movies, nbrToShow, category){
+      for (i=0; i<nbrToShow; i++){
+        
+      document.getElementById(`${category}`).innerHTML += `<img id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}">`
+      }
+    };
+getCategory(28,5,"action")
+getCategory(12,5,"adventure")
+getCategory(16,5,"animation")
+getCategory(35,5,"comedy")
+getCategory(80,5,"crime")
+getCategory(99,5,"documentary")
+getCategory(28,5,"drama")
+getCategory(10751,5,"family")
+getCategory(14,5,"fantasy")
+getCategory(36,5,"history")
+getCategory(27,5,"horror")
+getCategory(402,5,"music")
 
 
     </script>
