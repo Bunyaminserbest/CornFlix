@@ -111,6 +111,7 @@ include('header.php');
     .then(response => response.json())
     .then(data=> {
       getMovie(data.results)
+      
     })
     function getMovie(movies){
       for(i=0; i<20; i++){
@@ -124,6 +125,7 @@ include('header.php');
           document.getElementById(`movie4`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }
       }
+      modal() 
     }
    
 
@@ -149,11 +151,13 @@ include('header.php');
     }
 
 
+
+
     function getCategory(id,nbrToShow, category){
       fetch(`https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&&with_genres=${id}`)
       .then(response => response.json())
       .then(data=> {
-      console.log(data)
+      
       showCategory(data.results, nbrToShow, category)
     })}
     function showCategory(movies, nbrToShow, category){
@@ -176,6 +180,15 @@ getCategory(27,5,"horror")
 getCategory(402,5,"music")
 
 
+function modal(){
+  document.getElementById('post0').onclick = function(){
+  
+  
+
+  
+  
+}
+}
     </script>
 
 <?php
