@@ -4,7 +4,7 @@ include('header.php')
 ?>
 
 H1>P<LAYER Film <?=$_GET['id']?></H1>
-<div id="player">Hello</div>
+<div id="player" class="container">Hello</div>
 <div id="comments"></div>
 <div id="user"></div>
 <div id="commen"></div>
@@ -38,7 +38,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=a85ec5f72622
       showTrailer(data.results)
     })
     function showTrailer(movie){
-        document.getElementById("player").innerHTML += `<iframe width="1600" height="1200" src="http://www.youtube.com/embed/${movie[0].key}"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        document.getElementById("player").innerHTML += `<iframe width="100%" height="600px" src="http://www.youtube.com/embed/${movie[0].key}"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         
     }
 
