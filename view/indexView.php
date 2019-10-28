@@ -116,16 +116,16 @@ include('header.php');
     function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
-          document.getElementById(`movie1`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
-        }else if (i<10){
-          document.getElementById(`movie2`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
-        }else if(i<15){
-          document.getElementById(`movie3`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
-        }else{
+            document.getElementById(`movie1`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" onclick="modal(i)" class="d-block" alt="">`
+          }else if (i<10){
+            document.getElementById(`movie2`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+          }else if(i<15){
+            document.getElementById(`movie3`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
+          }else{
           document.getElementById(`movie4`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }
       }
-      modal() 
+       
     }
    
 
@@ -180,12 +180,11 @@ getCategory(27,5,"horror")
 getCategory(402,5,"music")
 
 
-function modal(){
-  document.getElementById('post0').onclick = function(){
-  
-  
+function modal(i){
+  document.getElementById(`post0`).onclick = function(){
+    console.log("hello")
+    document.getElementById(`post0`).innerHTML += `Hello`
 
-  
   
 }
 }
