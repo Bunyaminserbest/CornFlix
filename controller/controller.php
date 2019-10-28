@@ -11,7 +11,7 @@ function login(){
         // verifie le mot de passe et sauvegarde les infos de sessions
         if(password_verify($_POST['password'],$row['password'])){
            $_SESSION['user_id']=$row['user_id'];
-           
+           $_SESSION['rank']= $row['rank'];
           $_SESSION['username']=$row['username'];
          header('location:./index.php?action=home');
         } else {
