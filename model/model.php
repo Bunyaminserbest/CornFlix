@@ -48,4 +48,3 @@ function contactSql($data)
   $result = $statement->execute($data);
   return $result;
 }
-?>
