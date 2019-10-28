@@ -15,12 +15,14 @@ if ($user_id ) {
         contact();
     }elseif ($_GET['action']== 'profil'){
         require('./view/profileView.php');
-    }else if($_GET['action'] == 'category'){
-        require('./view/categoryView.php');
+    }else if($_GET['action'] == 'categoryFilm'){
+        require('./view/categoryFilmView.php');
     }else if($_GET['action'] == 'player'){
         require('./view/playerView.php');
     }else if($_GET['action'] == 'playerSeries'){
         require('./view/playerSeriesView.php');
+    }else if($_GET['action'] == 'categorySerie'){
+        require('./view/categorySerieView.php');
     }}else{
         require('./view/indexView.php');
     }
