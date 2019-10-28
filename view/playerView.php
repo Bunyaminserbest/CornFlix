@@ -1,13 +1,31 @@
 <?php
-$title = 'Category';
+$title = 'Player';
 include('header.php')
 ?>
 
-<H1>PLAYER Film <?=$_GET['id']?></H1>
-<div id="player">Hello</div>
+H1>P<LAYER Film <?=$_GET['id']?></H1>
+<div id="player" class="container">Hello</div>
 <div id="comments"></div>
 <div id="user"></div>
 <div id="commen"></div>
+
+<!-- Comment Form -->
+
+<h2>Commentaires</h2>
+
+<form action="index.php?action=addComment&amp;id=<?= $post['id_comm'] ?>" method="post">
+    <div>
+        <label for="user_name">User name</label><br />
+        <input type="text" id="user_name" name="user_name" />
+    </div>
+    <div>
+        <label for="comment">Comment</label><br />
+        <textarea id="comment" name="comment"></textarea>
+    </div>
+    <div>
+        <input type="submit" />
+    </div>
+</form>
 
 
 <script>
@@ -20,7 +38,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=a85ec5f72622
       showTrailer(data.results)
     })
     function showTrailer(movie){
-        document.getElementById("player").innerHTML += `<iframe width="1600" height="1200" src="http://www.youtube.com/embed/${movie[0].key}"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        document.getElementById("player").innerHTML += `<iframe width="100%" height="600px" src="http://www.youtube.com/embed/${movie[0].key}"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         
     }
 
