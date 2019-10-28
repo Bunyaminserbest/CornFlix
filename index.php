@@ -19,6 +19,8 @@ if ($user_id ) {
         require('./view/categoryView.php');
     }else if($_GET['action'] == 'player'){
         require('./view/playerView.php');
+    }else if($_GET['action'] == 'playerSeries'){
+        require('./view/playerSeriesView.php');
     }}else{
         require('./view/indexView.php');
     }
