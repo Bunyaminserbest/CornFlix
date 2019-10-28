@@ -10,7 +10,7 @@ const fantasy = 14;
 const history = 36;
 const horror = 27;
 const music = 10402;
-const categoryUrl = `https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&with_genres=${id}`
+
 
 
 
