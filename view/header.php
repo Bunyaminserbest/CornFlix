@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/carousel.css">
   <script src="https://kit.fontawesome.com/09a3209f4f.js" crossorigin="anonymous"></script>
   <script src="./js/carousel.js"></script>
+  <script src="./js/script.js"></script>
   <title><?= $title?></title>
 </head>
 <body>
@@ -57,9 +58,10 @@
           <a class="dropdown-item" href="">Comedy</a>
           <a class="dropdown-item" href="">Crime</a>
           <a class="dropdown-item" href="">Documentary</a>
+          <a class="dropdown-item" href="">Drama</a>
           <a class="dropdown-item" href="">Family</a>  
           <a class="dropdown-item" href="">Fantasy</a>
-          <a class="dropdown-item" href=".>History</a>
+          <a class="dropdown-item" href="">History</a>
           <a class="dropdown-item" href="">Horor</a>
           <a class="dropdown-item" href="">Music</a>
          

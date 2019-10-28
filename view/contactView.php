@@ -1,6 +1,6 @@
 <?php
 $title = 'Contact-us';
-include('header.php')
+include('header.php');
 ?>
 
 
@@ -31,8 +31,10 @@ include('header.php')
     <label for="Message">Message</label>
     <input type="textarea" class="form-control hgtTxtArea"  name="message">
   </div>
-
-  <button type="submit" class="btn   submitBtn" name="login">Submit</button>
+<?php
+echo $message;
+?>
+  <button type="submit" class="btn   submitBtn" name="send">Submit</button>
 </form>
 </div>
 <?php

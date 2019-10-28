@@ -16,7 +16,7 @@ function login(){
          header('location:./index.php?action=home');
         } else {
         
-          $message = ' wrong password';
+          $message = 'wrong password';
           
           
           require_once('./view/connexionView.php');
@@ -54,3 +54,17 @@ function subscribe(){
   }
   require('./view/subscribeView.php');
 }
+
+
+  if(isset($_POST['username'])){
+    $data = [
+      ':username' => test_input($_POST['username']),
+      ':email' => test_input($_POST['email']),
+      ':subject' => $_POST['subject'],
+      ':message' => $_POST['message'],
+    ];
+    $statement = contactSql($data);
+    //header('location:./index.php?action=Contact-us');
+    $message = 'votre message à bien été envoyé';
+  }  
+?>

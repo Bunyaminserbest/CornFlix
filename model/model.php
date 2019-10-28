@@ -37,3 +37,15 @@ function subscribeSql($data)
   $result = $statement->execute($data);
   return $result;
 }
+function contactSql($data)
+{
+  $db = connect_db();
+
+  $query = "INSERT INTO messages
+  (username, email, subject, message)
+  VALUES (:username,:email,:subject,:message)";
+  $statement = $db->prepare($query);
+  $result = $statement->execute($data);
+  return $result;
+}
+?>
