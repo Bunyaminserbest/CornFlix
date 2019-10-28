@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/carousel.css">
   <script src="https://kit.fontawesome.com/09a3209f4f.js" crossorigin="anonymous"></script>
   <script src="./js/carousel.js"></script>
+  <script src="./js/script.js"></script>
   <title><?= $title?></title>
 </head>
 <body>
@@ -33,9 +34,17 @@
           Films
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="https://www.youtube.com/?gl=BE&hl=fr">Comedy</a>
-          <a class="dropdown-item" href="https://www.youtube.com/?gl=BE&hl=fr">Horor</a>
-          <a class="dropdown-item" href="https://www.youtube.com/?gl=BE&hl=fr">Drama</a>
+        <a class="dropdown-item" href="./index.php?action=category&id=28">Action</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=12">Adventure</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=16">Animation</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=35">Comedy</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=80">Crime</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=99">Documentary</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=10751">Family</a>  
+          <a class="dropdown-item" href="./index.php?action=category&id=14">Fantasy</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=36">History</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=27">Horor</a>
+          <a class="dropdown-item" href="./index.php?action=category&id=10402">Music</a>
         </div>
       </li>
       <li class="nav-item dropdown navUl">
@@ -43,9 +52,19 @@
           Series
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Comedy</a>
-          <a class="dropdown-item" href="#">Horor</a>
-          <a class="dropdown-item" href="#">Drama</a>
+          <a class="dropdown-item" href="">Action</a>
+          <a class="dropdown-item" href="">Adventure</a>
+          <a class="dropdown-item" href="">Animation</a>
+          <a class="dropdown-item" href="">Comedy</a>
+          <a class="dropdown-item" href="">Crime</a>
+          <a class="dropdown-item" href="">Documentary</a>
+          <a class="dropdown-item" href="">Drama</a>
+          <a class="dropdown-item" href="">Family</a>  
+          <a class="dropdown-item" href="">Fantasy</a>
+          <a class="dropdown-item" href="">History</a>
+          <a class="dropdown-item" href="">Horor</a>
+          <a class="dropdown-item" href="">Music</a>
+         
         </div>
       </li>
       
