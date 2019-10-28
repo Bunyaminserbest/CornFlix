@@ -12,7 +12,7 @@ if ($user_id ) {
     }elseif ($_GET['action']== 'faq'){
         require('./view/faqView.php');
     }elseif ($_GET['action']== 'Contact-us'){
-        require('./view/contactView.php');
+        contact();
     }elseif ($_GET['action']== 'profil'){
         require('./view/profileView.php');
     }else if($_GET['action'] == 'category'){
@@ -30,7 +30,7 @@ if ($user_id ) {
     }elseif ($_GET['action']== 'faq'){
         require('./view/faqView.php');
     }elseif ($_GET['action']== 'Contact-us'){
-        require('./view/contactView.php');
+        contact();
     }else if($_GET['action'] == 'subscribe'){
         subscribe();
     }}
