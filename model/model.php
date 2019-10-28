@@ -45,7 +45,10 @@ function contactSql($data)
   (username, email, subject, message)
   VALUES (:username,:email,:subject,:message)";
   $statement = $db->prepare($query);
+  var_dump($statement);
   $result = $statement->execute($data);
+  var_dump($data);
+  var_dump($result);
   return $result;
 }
 ?>
