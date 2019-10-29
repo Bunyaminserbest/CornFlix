@@ -77,11 +77,11 @@ include('header.php');
 
 <section id="genres" class="container" >
 <div class="">
-    <div class="d-flex align-items-center pt-3 pb-3">
-      <h3 class="pr-3 ">Action</h3>
+    <div class="d-flex align-items-center pt-3 pb-3" >
+      <h3 class="pr-3"> Action</h3>
       <a href="index.php?action=categoryFilm&id=28">See more...</a>
     </div>
-    <div id="action" class="d-flex justify-content-between"></div>
+    <div id="action" class="d-flex justify-content-between" style="flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -89,7 +89,7 @@ include('header.php');
       <h3 class="pr-3">Adventure</h3>
       <a href="index.php?action=categoryFilm&id=12">See more...</a>
     </div>
-    <div id="adventure" class="d-flex justify-content-between"></div>
+    <div id="adventure" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -97,7 +97,7 @@ include('header.php');
       <h3 class="pr-3">Animation</h3>
       <a href="index.php?action=categoryFilm&id=16">See more...</a>
     </div>
-    <div id="animation" class="d-flex justify-content-between"></div>
+    <div id="animation" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -105,7 +105,7 @@ include('header.php');
       <h3 class="pr-3">Comedy</h3>
       <a href="index.php?action=categoryFilm&id=35">See more...</a>
     </div>
-    <div id="comedy" class="d-flex justify-content-between"></div>
+    <div id="comedy" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -113,7 +113,7 @@ include('header.php');
     <h3 class="pr-3">Crime</h3>
     <a href="index.php?action=categoryFilm&id=80">See more...</a>
     </div>
-    <div id="crime" class="d-flex justify-content-between"></div>
+    <div id="crime" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -121,7 +121,7 @@ include('header.php');
     <h3 class="pr-3">Documentary</h3>
     <a href="index.php?action=categoryFilm&id=99">See more...</a>
     </div>
-    <div id="documentary" class="d-flex justify-content-between"></div>
+    <div id="documentary" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -129,7 +129,7 @@ include('header.php');
     <h3 class="pr-3">Drama</h3>
     <a href="index.php?action=categoryFilm&id=28">See more...</a>
     </div>
-    <div id="drama" class="d-flex justify-content-between"></div>
+    <div id="drama" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -137,7 +137,7 @@ include('header.php');
     <h3 class="pr-3">Family</h3>
     <a href="index.php?action=categoryFilm&id=10751">See more...</a>
     </div>
-    <div id="family" class="d-flex justify-content-between"></div>
+    <div id="family" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -145,7 +145,7 @@ include('header.php');
     <h3 class="pr-3">Fantasy</h3>
     <a href="index.php?action=categoryFilm&id=14">See more...</a>
     </div>
-    <div id="fantasy" class="d-flex justify-content-between"></div>
+    <div id="fantasy" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -153,7 +153,7 @@ include('header.php');
     <h3 class="pr-3">History</h3>
     <a href="index.php?action=categoryFilm&id=36">See more...</a>
     </div>
-    <div id="history" class="d-flex justify-content-between"></div>
+    <div id="history" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -161,7 +161,7 @@ include('header.php');
     <h3 class="pr-3">Horror</h3>
     <a href="index.php?action=categoryFilm&id=27">See more...</a>
     </div>
-    <div id="horror" class="d-flex justify-content-between"></div>
+    <div id="horror" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
@@ -169,7 +169,7 @@ include('header.php');
     <h3 class="pr-3">Music</h3>
     <a href="index.php?action=categoryFilm&id=10402">See more...</a>
     </div>
-    <div id="music" class="d-flex justify-content-between"></div>
+    <div id="music" class="d-flex justify-content-between"style="display: flex;flex-wrap: wrap;"></div>
   </div>
 </section>
 
