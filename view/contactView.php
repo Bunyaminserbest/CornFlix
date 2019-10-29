@@ -13,7 +13,7 @@ include('header.php');
 <form action="" method="POST" class="">
   
   <div class="form-group "  >
-    <label for="Username">Username</label>
+    <label for="name">name</label>
     <input type="text" class="form-control"  name="username">
   </div>
 
@@ -28,7 +28,7 @@ include('header.php');
   </div>
 
   <div class="form-group "  >
-    <label for="Message">Message</label>
+    <label for="message">Message</label>
     <input type="textarea" class="form-control hgtTxtArea"  name="message">
   </div>
 <?php

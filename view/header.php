@@ -18,7 +18,7 @@
 
 <!-- BARRE DE NAVIGATION -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="main.php">KornFlix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -34,17 +34,17 @@
           Films
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="./index.php?action=category&id=28">Action</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=12">Adventure</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=16">Animation</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=35">Comedy</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=80">Crime</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=99">Documentary</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=10751">Family</a>  
-          <a class="dropdown-item" href="./index.php?action=category&id=14">Fantasy</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=36">History</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=27">Horor</a>
-          <a class="dropdown-item" href="./index.php?action=category&id=10402">Music</a>
+        <a class="dropdown-item" href="./index.php?action=categoryFilm&id=28">Action</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=12">Adventure</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=16">Animation</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=35">Comedy</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=80">Crime</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=99">Documentary</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=10751">Family</a>  
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=14">Fantasy</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=36">History</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=27">Horor</a>
+          <a class="dropdown-item" href="./index.php?action=categoryFilm&id=10402">Music</a>
         </div>
       </li>
       <li class="nav-item dropdown navUl">
@@ -52,18 +52,18 @@
           Series
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="">Action</a>
-          <a class="dropdown-item" href="">Adventure</a>
-          <a class="dropdown-item" href="">Animation</a>
-          <a class="dropdown-item" href="">Comedy</a>
-          <a class="dropdown-item" href="">Crime</a>
-          <a class="dropdown-item" href="">Documentary</a>
-          <a class="dropdown-item" href="">Drama</a>
-          <a class="dropdown-item" href="">Family</a>  
-          <a class="dropdown-item" href="">Fantasy</a>
-          <a class="dropdown-item" href="">History</a>
-          <a class="dropdown-item" href="">Horor</a>
-          <a class="dropdown-item" href="">Music</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=28">Action</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=12">Adventure</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=16">Animation</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=35">Comedy</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=80">Crime</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=99">Documentary</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=18">Drama</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=10751">Family</a>  
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=14">Fantasy</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=36">History</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=27">Horor</a>
+          <a class="dropdown-item" href="./index.php?action=categorySerie&id=10402">Music</a>
          
         </div>
       </li>

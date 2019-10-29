@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 img{
 padding: 1%;
 }
 
+=======
+>>>>>>> e21417932f254f4c66cde575ecf39e66ce1677d0
 /*.carousel-items{
       justify-content: center;
 }*/
@@ -14,8 +17,9 @@ padding: 1%;
       backface-visibility: hidden;
       transition: -webkit-transform .6s ease-in-out;
       transition: transform .6s ease-in-out;
-      transition: transform .6s ease-in-out,-webkit-transform .6s;
+      transition: transform .6s ease-in-out, -webkit-transform .6s;
 }
+
 .carousel-item.active {
       display: flex;
       
