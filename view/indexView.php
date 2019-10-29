@@ -8,16 +8,25 @@ include('header.php');
   <a href="view/logout.php">Deconnection</a>
 
 
-<h1>MOVIES</h1>
+<h1 class="container text-center mb-0 pt-3 pb-3">MOVIES</h1>
 
 
 <!--Carousel Movies-->
-<div id="carouselMovies" class="carousel slide" >
-  <div class="carousel-inner">
-    <div id="movie1" class="carousel-item test active row"></div>
-    <div id="movie2" class="carousel-item test row"></div>
-    <div id="movie3" class="carousel-item test row"></div>
-    <div id="movie4" class="carousel-item test row"></div>
+<div id="carouselMovies" class="carousel slide container" >
+  <div class="carousel-inner ">
+
+    <div  class="carousel-item test active ">
+      <div id="movie1" class="row"></div>
+    </div>
+    <div  class="carousel-item test ">
+      <div id="movie2"class="row"></div>
+    </div>
+    <div class="carousel-item test ">
+      <div id="movie3"  class="row"></div>
+    </div>
+    <div  class="carousel-item test">
+      <div id="movie4" class="row"></div>
+    </div>
     
     <a class="carousel-control-prev" href="#carouselMovies" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,16 +41,24 @@ include('header.php');
 
   
   
-<h1>SERIES</h1>
+<h1 class="container text-center mb-0 pt-3 pb-3">SERIES</h1>
 <!--Carousel tvShow-->
 
-<div id="carouselTvShow" class="carousel slide" ">
-  <div class="carousel-inner">
+<div id="carouselTvShow" class="carousel slide container">
+  <div class="carousel-inner ">
     
-    <div id="tvShow1" class="carousel-item test active"></div>
-    <div id="tvShow2" class="carousel-item test"></div>
-    <div id="tvShow3" class="carousel-item test"></div>
-    <div id="tvShow4" class="carousel-item test"></div>
+    <div  class="carousel-item test active">
+      <div id="tvShow1" class="row"></div>
+    </div>
+    <div  class="carousel-item test">
+      <div id="tvShow2" class="row"></div>
+    </div>
+    <div  class="carousel-item test">
+      <div id="tvShow3" class="row"></div>
+    </div>
+    <div  class="carousel-item test">
+      <div id="tvShow4" class="row"></div>
+    </div>
   
     <a class="carousel-control-prev" href="#carouselTvShow" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -58,103 +75,178 @@ include('header.php');
 
 
 
+<<<<<<< HEAD
 <section id="genres" ">
 <div>
     <div class="d-flex align-items-center">
       <h3>Action</h3>
       <a href="index.php?action=categoryFilm&id=28">See more...</a>
+=======
+<section id="genres" class="container" >
+<div class="">
+    <div class="d-flex align-items-center pt-3 pb-3">
+      <h3 class="pr-3 ">Action</h3>
+      <a href="index.php?action=category&id=28">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="action"></div>
+    <div id="action" class="d-flex justify-content-between"></div>
   </div>
 
+<<<<<<< HEAD
   <div>
     <div class="d-flex align-items-center">
       <h3>Adventure</h3>
       <a href="index.php?action=categoryFilm&id=12">See more...</a>
+=======
+  <div class="">
+    <div class="d-flex align-items-center pt-3 pb-3">
+      <h3 class="pr-3">Adventure</h3>
+      <a href="index.php?action=category&id=12">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="adventure"></div>
+    <div id="adventure" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
       <h3>Animation</h3>
       <a href="index.php?action=categoryFilm&id=16">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+      <h3 class="pr-3">Animation</h3>
+      <a href="index.php?action=category&id=16">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="animation"></div>
+    <div id="animation" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
       <h3>Comedy</h3>
       <a href="index.php?action=categoryFilm&id=35">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+      <h3 class="pr-3">Comedy</h3>
+      <a href="index.php?action=category&id=35">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="comedy"></div>
+    <div id="comedy" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Crime</h3>
     <a href="index.php?action=categoryFilm&id=80">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Crime</h3>
+    <a href="index.php?action=category&id=80">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="crime"></div>
+    <div id="crime" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Documentary</h3>
     <a href="index.php?action=categoryFilm&id=99">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Documentary</h3>
+    <a href="index.php?action=category&id=99">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="documentary"></div>
+    <div id="documentary" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Drama</h3>
     <a href="index.php?action=categoryFilm&id=28">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Drama</h3>
+    <a href="index.php?action=category&id=28">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="drama"></div>
+    <div id="drama" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Family</h3>
     <a href="index.php?action=categoryFilm&id=10751">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Family</h3>
+    <a href="index.php?action=category&id=10751">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="family"></div>
+    <div id="family" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Fantasy</h3>
     <a href="index.php?action=categoryFilm&id=14">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Fantasy</h3>
+    <a href="index.php?action=category&id=14">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="fantasy"></div>
+    <div id="fantasy" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>History</h3>
     <a href="index.php?action=categoryFilm&id=36">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">History</h3>
+    <a href="index.php?action=category&id=36">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="history"></div>
+    <div id="history" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Horror</h3>
     <a href="index.php?action=categoryFilm&id=27">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Horror</h3>
+    <a href="index.php?action=category&id=27">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="horror"></div>
+    <div id="horror" class="d-flex justify-content-between"></div>
   </div>
 
   <div>
+<<<<<<< HEAD
     <div class="d-flex align-items-center">
     <h3>Music</h3>
     <a href="index.php?action=categoryFilm&id=10402">See more...</a>
+=======
+    <div class="d-flex align-items-center pt-3 pb-3">
+    <h3 class="pr-3">Music</h3>
+    <a href="index.php?action=category&id=10402">See more...</a>
+>>>>>>> d159ff30a8ba37fc03607baf1617c4cb690d5d70
     </div>
-    <div id="music"></div>
+    <div id="music" class="d-flex justify-content-between"></div>
   </div>
-
+</section>
 
 
 <script>
@@ -222,13 +314,13 @@ include('header.php');
     function getTvshow(movies){
       for(i=0; i<20; i++){
         if (i<5){
-          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
         }else if (i<10){
-          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
         }else if(i<15){
-          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
         }else{
-          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
         }
       }
     }

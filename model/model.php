@@ -51,4 +51,13 @@ function contactSql($data)
   var_dump($result);
   return $result;
 }
+function postComment($id_movie, $username, $comment){
+
+    $db = connect_db();
+    $comments = $db->prepare('INSERT INTO comment(id_movie, username, comment, comment_date ) VALUE (?,?,?, NOW())');
+    $affectedLines = $comments->execute(array($id_movie, $username, $comment));
+
+    return $affectedLines;
+}
+
 ?>
