@@ -82,7 +82,7 @@
      </button>
      <div class="dropdown-menu">
       <a class="dropdown-item" href="./index.php?action=login">Sign-in</a>
-      <a class="dropdown-item" href="./index.php?action=profil">My profil</a>
+      <a class="dropdown-item" href="./index.php?action=profil&id='.$_SESSION['user_id'].'">My profil</a>
       <a class="dropdown-item" href="#">My list</a>
       <a class="dropdown-item" href="./view/logout.php">Logout</a>
     </div>
