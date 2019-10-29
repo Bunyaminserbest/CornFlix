@@ -65,5 +65,22 @@ function subscribe(){
     $statement = contactSql($data);
     //header('location:./index.php?action=Contact-us');
     $message = 'votre message à bien été envoyé';
-  }  
+
+  } 
+  require('./view/contactView.php');
+ }
+
+ function comments(){
+  if (isset($_GET['id']) && $_GET['id'] > 0) {
+    $comments = getComments($_GET['id']);
+    //var_dump($comments);
+    
+}
+else {
+    echo 'Erreur : aucun identifiant de billet envoyé';
+}
+require('./view/playerView.php');
+ }
+
+
 ?>
