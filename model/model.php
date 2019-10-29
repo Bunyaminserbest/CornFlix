@@ -45,10 +45,7 @@ function contactSql($data)
   (username, email, subject, message)
   VALUES (:username,:email,:subject,:message)";
   $statement = $db->prepare($query);
-  var_dump($statement);
   $result = $statement->execute($data);
-  var_dump($data);
-  var_dump($result);
   return $result;
 }
 function getComments($id_movie)
@@ -59,6 +56,6 @@ function getComments($id_movie)
     //var_dump($id_movie);
     //var_dump($comments);
     return $comments;
-}
 
+}
 ?>

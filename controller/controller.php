@@ -55,7 +55,6 @@ function subscribe(){
   require('./view/subscribeView.php');
 }
 
-function contact(){
   if(isset($_POST['username'])){
     $data = [
       ':username' => test_input($_POST['username']),
@@ -63,11 +62,10 @@ function contact(){
       ':subject' => $_POST['subject'],
       ':message' => $_POST['message'],
     ];
-    var_dump($data);  
     $statement = contactSql($data);
-    var_dump($statement);
-    //header('location:./test.php');
+    //header('location:./index.php?action=Contact-us');
     $message = 'votre message à bien été envoyé';
+
   } 
   require('./view/contactView.php');
  }
@@ -83,5 +81,6 @@ else {
 }
 require('./view/playerView.php');
  }
+
 
 ?>
