@@ -53,8 +53,8 @@ function subscribe(){
   }
   }
   require('./view/subscribeView.php');
-
-
+}
+function contact(){
   if(isset($_POST['username'])){
     $data = [
       ':username' => test_input($_POST['username']),

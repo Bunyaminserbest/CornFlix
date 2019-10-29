@@ -20,7 +20,7 @@ while ($data = $comments->fetch())
 ?>
     <h3><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
     <p><?=nl2br(htmlspecialchars($data['comment']));} ?></p>
-
+<p></p>
 
 
 
