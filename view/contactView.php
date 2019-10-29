@@ -33,8 +33,10 @@ include('header.php');
   </div>
 <?php
 if(isset($message)){
-echo $message;}
+echo $message;
+}
 ?>
+
   <button type="submit" class="btn   submitBtn" name="send">Submit</button>
 </form>
 </div>

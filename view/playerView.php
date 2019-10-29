@@ -1,31 +1,28 @@
 <?php
 $title = 'Player';
-include('header.php')
+include('header.php');
+
 ?>
 
-H1>P<LAYER Film <?=$_GET['id']?></H1>
-<div id="player" class="container">Hello</div>
-<div id="comments"></div>
-<div id="user"></div>
-<div id="commen"></div>
+<H1>PLAYER Film <?=$_GET['id']?></H1>
+<div id="player" class="container"></div>
 
-<!-- Comment Form -->
+
+<!-- Comments -->
 
 <h2>Commentaires</h2>
+<?php
+//include('./controller/controller.php');
 
-<form action="index.php?action=addComment&amp;id=<?= $post['id_comm'] ?>" method="post">
-    <div>
-        <label for="user_name">User name</label><br />
-        <input type="text" id="user_name" name="user_name" />
-    </div>
-    <div>
-        <label for="comment">Comment</label><br />
-        <textarea id="comment" name="comment"></textarea>
-    </div>
-    <div>
-        <input type="submit" />
-    </div>
-</form>
+$comments = getComments($_GET['id']);
+while ($data = $comments->fetch())
+{
+?>
+    <h3><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
+    <p><?=nl2br(htmlspecialchars($data['comment']));} ?></p>
+
+
+
 
 
 <script>
@@ -42,7 +39,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=a85ec5f72622
         
     }
 
-    fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US&page=1`)
+    /*fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US&page=1`)
         .then(response => response.json())
         .then(data =>{
             console.log(data)
@@ -51,7 +48,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=a85ec5f72622
     function showComments(comment){
         document.getElementById("user").innerHTML += `<h3>${comment[1].author}</h3>`
         document.getElementById("commen").innerHTML += `<p>${comment[1].content}</p>`
-    }
+    }*/
 </script>
 
 <?php

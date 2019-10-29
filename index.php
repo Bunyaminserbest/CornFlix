@@ -18,7 +18,8 @@ if ($user_id ) {
     }else if($_GET['action'] == 'categoryFilm'){
         require('./view/categoryFilmView.php');
     }else if($_GET['action'] == 'player'){
-        require('./view/playerView.php');
+
+        comments();
     }else if($_GET['action'] == 'playerSeries'){
         require('./view/playerSeriesView.php');
     }else if($_GET['action'] == 'categorySerie'){
@@ -42,3 +43,4 @@ if ($user_id ) {
     require('./view/landing.php');
 }
 
+//Verify id movie
