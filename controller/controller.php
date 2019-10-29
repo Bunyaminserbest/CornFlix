@@ -53,7 +53,7 @@ function subscribe(){
   }
   }
   require('./view/subscribeView.php');
-}
+
 
   if(isset($_POST['username'])){
     $data = [
