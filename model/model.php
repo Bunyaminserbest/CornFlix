@@ -48,6 +48,7 @@ function contactSql($data)
   $result = $statement->execute($data);
   return $result;
 }
+
 function getComments($id_movie)
 {
     $db = connect_db();
@@ -58,4 +59,5 @@ function getComments($id_movie)
     return $comments;
 
 }
+
 ?>
