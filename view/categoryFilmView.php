@@ -2,9 +2,10 @@
 $title = 'Category';
 include('header.php')
 ?>
-<h1>Movies category</h1>
+<h1 class="container pt-3 pb-1">Movies category</h1>
+<hr class="container">
 <div class="container">
-<section id='category' class="d-flex flex-wrap justify-content-between pt-2"></section>
+<section id='category' class="d-flex flex-wrap justify-content-between "></section>
 </div>
 <script>
 let id = '<?= $_GET['id']?>'
