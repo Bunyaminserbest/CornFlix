@@ -45,19 +45,16 @@ function contactSql($data)
   (username, email, subject, message)
   VALUES (:username,:email,:subject,:message)";
   $statement = $db->prepare($query);
-  var_dump($statement);
   $result = $statement->execute($data);
-  var_dump($data);
-  var_dump($result);
   return $result;
 }
-function postComment($id_movie, $username, $comment){
-
-    $db = connect_db();
-    $comments = $db->prepare('INSERT INTO comment(id_movie, username, comment, comment_date ) VALUE (?,?,?, NOW())');
-    $affectedLines = $comments->execute(array($id_movie, $username, $comment));
-
-    return $affectedLines;
+function profilesql()//fonction avatar profile
+{
+  $db = connect_db();
+  $data=[':avatar'=> $target_file];
+  $query="INSERT INTO login (avatar) VALUES (:avatar) WHERE user_id = '".$_GET['id']."' ";
+  $statement = $db->prepare($query);
+  $result = $statement->execute($data);
+  return $result;
 }
-
 ?>

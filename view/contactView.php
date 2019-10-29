@@ -32,8 +32,7 @@ include('header.php');
     <input type="textarea" class="form-control hgtTxtArea"  name="message">
   </div>
 <?php
-if(isset($message)){
-echo $message;}
+echo $message;
 ?>
   <button type="submit" class="btn   submitBtn" name="send">Submit</button>
 </form>
