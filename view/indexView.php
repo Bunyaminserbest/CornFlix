@@ -62,7 +62,7 @@ include('header.php');
 <div>
     <div class="d-flex align-items-center">
       <h3>Action</h3>
-      <a href="index.php?action=category&id=28">See more...</a>
+      <a href="index.php?action=categoryFilm&id=28">See more...</a>
     </div>
     <div id="action"></div>
   </div>
@@ -70,7 +70,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
       <h3>Adventure</h3>
-      <a href="index.php?action=category&id=12">See more...</a>
+      <a href="index.php?action=categoryFilm&id=12">See more...</a>
     </div>
     <div id="adventure"></div>
   </div>
@@ -78,7 +78,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
       <h3>Animation</h3>
-      <a href="index.php?action=category&id=16">See more...</a>
+      <a href="index.php?action=categoryFilm&id=16">See more...</a>
     </div>
     <div id="animation"></div>
   </div>
@@ -86,7 +86,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
       <h3>Comedy</h3>
-      <a href="index.php?action=category&id=35">See more...</a>
+      <a href="index.php?action=categoryFilm&id=35">See more...</a>
     </div>
     <div id="comedy"></div>
   </div>
@@ -94,7 +94,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Crime</h3>
-    <a href="index.php?action=category&id=80">See more...</a>
+    <a href="index.php?action=categoryFilm&id=80">See more...</a>
     </div>
     <div id="crime"></div>
   </div>
@@ -102,7 +102,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Documentary</h3>
-    <a href="index.php?action=category&id=99">See more...</a>
+    <a href="index.php?action=categoryFilm&id=99">See more...</a>
     </div>
     <div id="documentary"></div>
   </div>
@@ -110,7 +110,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Drama</h3>
-    <a href="index.php?action=category&id=28">See more...</a>
+    <a href="index.php?action=categoryFilm&id=28">See more...</a>
     </div>
     <div id="drama"></div>
   </div>
@@ -118,7 +118,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Family</h3>
-    <a href="index.php?action=category&id=10751">See more...</a>
+    <a href="index.php?action=categoryFilm&id=10751">See more...</a>
     </div>
     <div id="family"></div>
   </div>
@@ -126,7 +126,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Fantasy</h3>
-    <a href="index.php?action=category&id=14">See more...</a>
+    <a href="index.php?action=categoryFilm&id=14">See more...</a>
     </div>
     <div id="fantasy"></div>
   </div>
@@ -134,7 +134,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>History</h3>
-    <a href="index.php?action=category&id=36">See more...</a>
+    <a href="index.php?action=categoryFilm&id=36">See more...</a>
     </div>
     <div id="history"></div>
   </div>
@@ -142,7 +142,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Horror</h3>
-    <a href="index.php?action=category&id=27">See more...</a>
+    <a href="index.php?action=categoryFilm&id=27">See more...</a>
     </div>
     <div id="horror"></div>
   </div>
@@ -150,7 +150,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center">
     <h3>Music</h3>
-    <a href="index.php?action=category&id=10402">See more...</a>
+    <a href="index.php?action=categoryFilm&id=10402">See more...</a>
     </div>
     <div id="music"></div>
   </div>
