@@ -59,7 +59,9 @@ include('header.php');
 
 
 
+
 <section id="genres" class="container" >
+
 <div class="">
     <div class="d-flex align-items-center pt-3 pb-3" >
       <h3 class="pr-3"> Action</h3>
