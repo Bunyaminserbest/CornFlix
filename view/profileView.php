@@ -1,6 +1,6 @@
 <?php
   $title = 'Contact-us';
-  include('header.php')
+  include('header.php');
 ?>
 <?php
   function image(){
@@ -53,30 +53,30 @@
     }
 ?>
 <?php
-    if(isset($_GET['user_id']))
+    if(isset($_GET['id']))
     {
       $bdd= connect_db();
-      $getId = $_GET['user_id'];
+      $getId = $_GET['id'];
       $sql= "SELECT * FROM login WHERE user_id = $getId";
       foreach ($bdd->query($sql) as $row) {
 ?>
    <div class="p-5">
-    <h1><i class="fas fa-user-alt "></i> Profil of <?= $row['username']?></h1>
+    <h1><i class="fas fa-user-alt "></i> Profil of <?= $row['username'];?></h1>
     <hr>
     <ul>
-        <img src="<?= $row["avatar"]?>" alt="avatar">        
+        <img src="<?= $row["avatar"];?>" alt="avatar">        
         <ul>
           <li>
-            username : <?= $row['username']?>
+            username : <?= $row['username'];?>
           </li>
           <li>
-            name : <?= $row['name']?>
+            name : <?= $row['name'];?>
           </li>
           <li>
-            lastname : <?= $row['lastname']?>
+            lastname : <?= $row['lastname'];?>
           </li>
           <li>
-            email : <?= $row['email']?>
+            email : <?= $row['email'];}}?>
           </li>
         </ul>
         <?=image();?>
@@ -88,7 +88,7 @@
           <button class="my-2 my-sm-0 searchBtn" type="mail">Change mail adress</button>
           <button class="my-2 my-sm-0 searchBtn" type="password">Change password</button>
   </div> 
-<?php
+
 <?php
 include('footer.php')
 ?>

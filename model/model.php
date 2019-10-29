@@ -52,9 +52,7 @@ function profilesql()//fonction avatar profile
 {
   $db = connect_db();
   $data=[':avatar'=> $target_file];
-  $query = "INSERT INTO login
-  (avatar)
-  VALUES (:avatar) WHERE user_id = $_GET['id']";
+  $query="INSERT INTO login (avatar) VALUES (:avatar) WHERE user_id = '".$_GET['id']."' ";
   $statement = $db->prepare($query);
   $result = $statement->execute($data);
   return $result;
