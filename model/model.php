@@ -3,7 +3,7 @@
 function connect_db()
 {
   try {
-    $db = new PDO('mysql:host=localhost;dbname=Cornflix', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=cornflix', 'root', '');
     return $db;
   } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
@@ -51,13 +51,14 @@ function contactSql($data)
   var_dump($result);
   return $result;
 }
-function postComment($id_movie, $username, $comment){
-
+function getComments($id_movie)
+{
     $db = connect_db();
-    $comments = $db->prepare('INSERT INTO comment(id_movie, username, comment, comment_date ) VALUE (?,?,?, NOW())');
-    $affectedLines = $comments->execute(array($id_movie, $username, $comment));
-
-    return $affectedLines;
+    $comments = $db->prepare('SELECT id, username, comment, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comment WHERE id_movie = ? ORDER BY date DESC');
+    $comments->execute(array($id_movie));
+    //var_dump($id_movie);
+    //var_dump($comments);
+    return $comments;
 }
 
 ?>
