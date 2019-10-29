@@ -55,7 +55,6 @@ function subscribe(){
   require('./view/subscribeView.php');
 }
 
-function contact(){
   if(isset($_POST['username'])){
     $data = [
       ':username' => test_input($_POST['username']),
@@ -63,12 +62,25 @@ function contact(){
       ':subject' => $_POST['subject'],
       ':message' => $_POST['message'],
     ];
-    var_dump($data);  
     $statement = contactSql($data);
-    var_dump($statement);
-    //header('location:./test.php');
+    //header('location:./index.php?action=Contact-us');
     $message = 'votre message à bien été envoyé';
+
   } 
   require('./view/contactView.php');
  }
+
+ function comments(){
+  if (isset($_GET['id']) && $_GET['id'] > 0) {
+    $comments = getComments($_GET['id']);
+    //var_dump($comments);
+    
+}
+else {
+    echo 'Erreur : aucun identifiant de billet envoyé';
+}
+require('./view/playerView.php');
+ }
+
+
 ?>

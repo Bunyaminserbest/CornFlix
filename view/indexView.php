@@ -8,25 +8,16 @@ include('header.php');
   <a href="view/logout.php">Deconnection</a>
 
 
-<h1 class="container text-center mb-0 pt-3 pb-3">MOVIES</h1>
+<h1>MOVIES</h1>
 
 
 <!--Carousel Movies-->
-<div id="carouselMovies" class="carousel slide container" >
-  <div class="carousel-inner ">
-
-    <div  class="carousel-item test active ">
-      <div id="movie1" class="row"></div>
-    </div>
-    <div  class="carousel-item test ">
-      <div id="movie2"class="row"></div>
-    </div>
-    <div class="carousel-item test ">
-      <div id="movie3"  class="row"></div>
-    </div>
-    <div  class="carousel-item test">
-      <div id="movie4" class="row"></div>
-    </div>
+<div id="carouselMovies" class="carousel slide" >
+  <div class="carousel-inner">
+    <div id="movie1" class="carousel-item test active"></div>
+    <div id="movie2" class="carousel-item test"></div>
+    <div id="movie3" class="carousel-item test"></div>
+    <div id="movie4" class="carousel-item test"></div>
     
     <a class="carousel-control-prev" href="#carouselMovies" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,24 +32,16 @@ include('header.php');
 
   
   
-<h1 class="container text-center mb-0 pt-3 pb-3">SERIES</h1>
+<h1>SERIES</h1>
 <!--Carousel tvShow-->
 
-<div id="carouselTvShow" class="carousel slide container">
-  <div class="carousel-inner ">
+<div id="carouselTvShow" class="carousel slide" ">
+  <div class="carousel-inner">
     
-    <div  class="carousel-item test active">
-      <div id="tvShow1" class="row"></div>
-    </div>
-    <div  class="carousel-item test">
-      <div id="tvShow2" class="row"></div>
-    </div>
-    <div  class="carousel-item test">
-      <div id="tvShow3" class="row"></div>
-    </div>
-    <div  class="carousel-item test">
-      <div id="tvShow4" class="row"></div>
-    </div>
+    <div id="tvShow1" class="carousel-item test active"></div>
+    <div id="tvShow2" class="carousel-item test"></div>
+    <div id="tvShow3" class="carousel-item test"></div>
+    <div id="tvShow4" class="carousel-item test"></div>
   
     <a class="carousel-control-prev" href="#carouselTvShow" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,6 +54,7 @@ include('header.php');
 
   </div>
 </div>
+
 
 
 
@@ -174,6 +158,7 @@ include('header.php');
 </section>
 
 
+
 <script>
   
    /* function details() {
@@ -216,13 +201,13 @@ include('header.php');
     function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
-            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie1`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" onclick="modal(i)" class="d-block" alt="">`
           }else if (i<10){
-            document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie2`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
           }else if(i<15){
-            document.getElementById(`movie3`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie3`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
           }else{
-          document.getElementById(`movie4`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`movie4`).innerHTML += `<img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }
       }
        
@@ -239,13 +224,13 @@ include('header.php');
     function getTvshow(movies){
       for(i=0; i<20; i++){
         if (i<5){
-          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow1`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }else if (i<10){
-          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow2`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }else if(i<15){
-          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow3`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }else{
-          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow4`).innerHTML += `<img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="">`
         }
       }
     }
@@ -263,7 +248,7 @@ include('header.php');
     function showCategory(movies, nbrToShow, category){
       for (i=0; i<nbrToShow; i++){
         
-      document.getElementById(`${category}`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}"></a>`
+      document.getElementById(`${category}`).innerHTML += `<img id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}">`
       }
     };
 getCategory(28,5,"action")
@@ -277,7 +262,7 @@ getCategory(10751,5,"family")
 getCategory(14,5,"fantasy")
 getCategory(36,5,"history")
 getCategory(27,5,"horror")
-getCategory(10402,5,"music")
+getCategory(402,5,"music")
 
 
 function modal(i){
