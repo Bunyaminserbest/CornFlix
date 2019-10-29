@@ -48,7 +48,7 @@ function contactSql($data)
   $result = $statement->execute($data);
   return $result;
 }
-
+//GET COMMENTS FROM DB
 function getComments($id_movie)
 {
     $db = connect_db();
@@ -58,6 +58,14 @@ function getComments($id_movie)
     //var_dump($comments);
     return $comments;
 
+//INSERT INTO COMMENT DB
+}
+function postComment($id_movie, $username, $comment){
+  $db = connect_db();
+  $data = $db->prepare('INSERT INTO comment (id_movie, username, comment, date) VALUES (?, ?, ?, NOW())');
+  $affectedLines = $data->execute(array($id_movie, $username, $comment));
+
+  return $affectedLines;
 }
 
 ?>
