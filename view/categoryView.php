@@ -3,7 +3,11 @@ $title = 'Category';
 include('header.php')
 ?>
 <h1>Movies category</h1>
-<section id='category'></section>
+
+<div class="container">
+<section id='category' class="d-flex flex-wrap justify-content-between"></section>
+</div>
+
 <script>
 let id = '<?= $_GET['id']?>'
 console.log(id)
