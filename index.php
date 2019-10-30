@@ -14,7 +14,7 @@ if ($user_id ) {
     }elseif ($_GET['action']== 'Contact-us'){
         contact();
     }elseif ($_GET['action']== 'profil'){
-        require('./view/profileView.php');
+        profile();
     }else if($_GET['action'] == 'categoryFilm'){
         require('./view/categoryFilmView.php');
     }else if($_GET['action'] == 'player'){
