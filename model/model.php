@@ -67,6 +67,25 @@ function postComment($id_movie, $username, $comment){
 
   return $affectedLines;
 }
+//GET COMMENTS FROM DB
+function getCommentsSerie($id_serie)
+{
+    $db = connect_db();
+    $comments = $db->prepare('SELECT id, username, comment, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comment_series WHERE id_movie = ? ORDER BY date DESC');
+    $comments->execute(array($id_serie));
+    //var_dump($id_movie);
+    //var_dump($comments);
+    return $comments;
+
+//INSERT INTO COMMENT DB
+}
+function postCommentSerie($id_serie, $username, $comment){
+  $db = connect_db();
+  $data = $db->prepare('INSERT INTO comment_series (id_movie, username, comment, date) VALUES (?, ?, ?, NOW())');
+  $affectedLines = $data->execute(array($id_serie, $username, $comment));
+
+  return $affectedLines;
+}
 function addAvatar($data){
   $db = connect_db();
 
