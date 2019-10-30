@@ -3,6 +3,7 @@
   include('header.php');
 ?>
 <?php
+
   
 
     //condition pour rentré dans la ddb
@@ -11,6 +12,7 @@
       echo "<p class='text-warning'>".$message."<p>";
     }else{
       foreach ($result as $row) {
+
         
 ?>
    <div class="p-5">
@@ -33,8 +35,9 @@
           <li>
             email : <?= $row['email'];}}?>
           </li>
-        </ul>
+        </ul> 
         
+
         <form method="POST" action="" enctype="multipart/form-data">
           <label for="avatar"> Add avatar</label>
           <input type="file" name="avatar">
