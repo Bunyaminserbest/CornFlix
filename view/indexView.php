@@ -10,7 +10,8 @@ include('header.php');
 
 <h1 class="container text-center mb-0 pt-3 pb-3">MOVIES</h1>
 
-
+<div class="bs-example">
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 <!--Carousel Movies-->
 <div id="carouselMovies" class="carousel slide " >
   <div class="carousel-inner ">
@@ -216,7 +217,7 @@ include('header.php');
     function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
-            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" data-toggle="popover" title="Modal long Text" data-content="You gotta go through it to see there ain't nothing to it. Listen to the silence. And when the silence is deafening, you're in the center of your own universe." alt=""></a>`
+            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
           }else if (i<10){
             document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
           }else if(i<15){
@@ -252,7 +253,7 @@ include('header.php');
 
 
 
-
+    //FETCH CATEGORIES
     function getCategory(id,nbrToShow, category){
       fetch(`https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&&with_genres=${id}`)
       .then(response => response.json())
@@ -289,6 +290,7 @@ function modal(i){
 }
 }
     </script>
+    
 
 <?php
 include('footer.php')
