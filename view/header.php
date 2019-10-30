@@ -21,7 +21,7 @@
 <!-- BARRE DE NAVIGATION -->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark navbarStyle">
   <a class="navbar-brand" href="./index.php?action=home">KornFlix</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +30,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto navUl">
-      <li class="nav-item active navUl">
+      <li class="nav-item active navUl col-md-2 col-sm-12">
         <a class="nav-link" href="./index.php?action=home">Accueil <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown navUl">
+      <li class="nav-item dropdown navUl col-md-2">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Films
         </a>
@@ -51,7 +51,7 @@
           <a class="dropdown-item" href="./index.php?action=categoryFilm&id=10402">Music</a>
         </div>
       </li>
-      <li class="nav-item dropdown navUl">
+      <li class="nav-item dropdown navUl col-md-2">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Series
         </a>
@@ -74,16 +74,18 @@
       
     </ul>
     <?php if(isset($_SESSION['user_id'])){
-      echo '<form action=""  method="Get" class="form-inline my-2 my-lg-0">
+
+      echo '<form action=""  method="Get" class="form-inline my-2 my-lg-0 d-flex justify-content-center">
       <input type="hidden" name="action" value="search">
-      <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
-      <button class="my-2 my-sm-0 searchBtn" type="submit">Search</button>
+      <input class="form-control mr-sm-2 text-center" name="query" type="search" placeholder="Search" aria-label="Search">
+      <button class="my-2 my-sm-0 searchBtn col-md-3" type="submit">Search</button>
+
     </form>
 
-    <div class="dropdown">
-     <button style="color:grey;" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" ><i class="fas fa-user fa-2x" ></i></a>
+    <div class="dropdown d-flex justify-content-center">
+     <button style="color:grey;" type="button" class="btn  dropdown-toggle col-md-1" data-toggle="dropdown" ><i class="fas fa-user fa-2x" ></i></a>
      </button>
-     <div class="dropdown-menu">
+     <div class="dropdown-menu col-md-2 text-center DDM">
       <a class="dropdown-item" href="./index.php?action=login">Sign-in</a>
       <a class="dropdown-item" href="./index.php?action=profil&id='.$_SESSION['user_id'].'">My profil</a>
       <a class="dropdown-item" href="#">My list</a>
@@ -92,8 +94,8 @@
 
   </div>';
     }else{
-echo '<a href="./index.php?action=login" class="btn btn-nav">login</a>
-<a href="./index.php?action=subscribe" class="btn btn-nav">inscription</a>';
+echo '<div class=" d-flex"><a href="./index.php?action=login" class="btn btn-nav col-sm-5">login</a>
+<a href="./index.php?action=subscribe" class="btn btn-nav ">inscription</a></div>';
     }
     ?>
     </nav>

@@ -4,7 +4,8 @@ $title = 'Bienvenue sur KornFlix';
 include('header.php');
 
 ?>
-<h1>Bienvenue sur KornFlix</h1>
+<img src="./bgLandingP.jpg" alt="" class="lpBg">
+
 
 <?php
 include('footer.php')

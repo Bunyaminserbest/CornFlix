@@ -1,24 +1,22 @@
 body {
-  background-color: #4A0100;
+  background-color: #4a0100;
   color: white;
   width: 100%;
   height: 100vh;
-
 }
 
 .searchBtn {
   height: 37px;
   color: white;
-  background-color: #CC0501;
-  border: 1px solid #CC0501;
+  background-color: #cc0501;
+  border: 1px solid #cc0501;
   border-radius: 5px;
   font-weight: bold;
 }
 
-
 .submitBtn {
   color: white;
-  background-color: #CC0501;
+  background-color: #cc0501;
   padding: 10px 88px !important;
 }
 
@@ -39,12 +37,10 @@ body {
 
 a {
   color: inherit;
-
-
 }
 
 a:hover {
-  color: #CC0501;
+  color: #cc0501;
   text-decoration: none;
 }
 
@@ -54,7 +50,7 @@ a:hover {
 
 .btn-nav {
   color: white;
-  background-color: #CC0501;
+  background-color: #cc0501;
   padding: 5px 50px !important;
   margin: 0px 10px;
 }
@@ -66,4 +62,19 @@ a:hover {
 hr {
   color: black;
   font-size: bolder;
+
+}
+
+.lpBg {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+@media screen and (min-width : 700px) {
+  .DDM {
+    left: -100%;
+  }
+
 }
