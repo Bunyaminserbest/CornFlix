@@ -67,5 +67,36 @@ function postComment($id_movie, $username, $comment){
 
   return $affectedLines;
 }
+function addAvatar($data){
+  $db = connect_db();
 
+  $query="UPDATE login SET avatar=:avatar WHERE user_id = :id";
+  $statement = $db->prepare($query);
+  $result = $statement->execute($data);
+   
+    return $result;
+}
+function userData(){
+  $db= connect_db();
+  $getId = $_GET['id'];
+  $sql= "SELECT * FROM login WHERE user_id = $getId";
+  $result = $db->query($sql);
+  return $result;
+}
+function changeMail($data){
+$db = connect_db();
+$query = "UPDATE login SET email = :newMail WHERE user_id = :id";
+$statement = $db->prepare($query);
+  $result = $statement->execute($data);
+   
+    return $result;
+}
+function changePassword($data){
+  $db = connect_db();
+$query = "UPDATE login SET password = :newPassword WHERE user_id = :id";
+$statement = $db->prepare($query);
+  $result = $statement->execute($data);
+   
+    return $result;
+}
 ?>
