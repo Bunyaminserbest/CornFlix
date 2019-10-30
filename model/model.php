@@ -77,11 +77,26 @@ function addAvatar($data){
     return $result;
 }
 function userData(){
-  $bdd= connect_db();
+  $db= connect_db();
   $getId = $_GET['id'];
   $sql= "SELECT * FROM login WHERE user_id = $getId";
-  $result = $bdd->query($sql);
+  $result = $db->query($sql);
   return $result;
 }
-
+function changeMail($data){
+$db = connect_db();
+$query = "UPDATE login SET email = :newMail WHERE user_id = :id";
+$statement = $db->prepare($query);
+  $result = $statement->execute($data);
+   
+    return $result;
+}
+function changePassword($data){
+  $db = connect_db();
+$query = "UPDATE login SET password = :newPassword WHERE user_id = :id";
+$statement = $db->prepare($query);
+  $result = $statement->execute($data);
+   
+    return $result;
+}
 ?>

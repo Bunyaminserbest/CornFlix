@@ -111,49 +111,74 @@ function image()
       echo "this file is not image";
       $uploadOk = 0;
     }
-    // Check if file already exists
-    if (file_exists($target_file)) {
-      echo "Existing file.";
-      $uploadOk = 0;
-    }
-    // Check file size
-    if ($_FILES["avatar"]["size"] > 5000000) {
-      echo "heavy file";
-      $uploadOk = 0;
-    }
-    // Allow certain file formats
-    if (
-      $FileType != "jpg" && $FileType != "png" && $FileType != "jpeg"
-      && $FileType != "gif"
-    ) {
-      echo "Correct file only.";
-      $uploadOk = 0;
-    }
-    // Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-      echo "Oops it did not work.";
-      // if everything is ok, try to upload file
+  }
+  // Check if file already exists
+  if (file_exists($target_file)) {
+    echo "Existing file.";
+    $uploadOk = 0;
+  }
+  // Check file size
+  if ($_FILES["avatar"]["size"] > 5000000) {
+    echo "heavy file";
+    $uploadOk = 0;
+  }
+  // Allow certain file formats
+  if (
+    $FileType != "jpg" && $FileType != "png" && $FileType != "jpeg"
+    && $FileType != "gif"
+  ) {
+    echo "Correct file only.";
+    $uploadOk = 0;
+  }
+  // Check if $uploadOk is set to 0 by an error
+  if ($uploadOk == 0) {
+    echo "Oops it did not work.";
+    // if everything is ok, try to upload file
+  } else {
+    if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
+      $array = explode('.', $_FILES['avatar']['name']);
+      $fileName = $array[0];
+
+      return $target_file;
     } else {
-      if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
-        $array = explode('.', $_FILES['avatar']['name']);
-        $fileName = $array[0];
-        return $target_file;
-      } else {
-        echo "Sorry, there was an error uploading your file.";
-      }
+      echo "Sorry, there was an error uploading your file.";
     }
   }
 }
 
+
 function profile()
 {
-  if (isset($_FILES['avatar'])) {
-    $target_file = image();
-    $data = [':avatar' => $target_file, ':id' => $_GET['id']];
-    $statement = addAvatar($data);
+  if ($_SESSION['user_id'] == $_GET['id']) {
+    if (isset($_FILES['avatar'])) {
+
+      $target_file = image();
+
+      $data = [':avatar' => $target_file, ':id' => $_GET['id']];
+
+      $statement = addAvatar($data);
+    }
+    if (isset($_GET['id'])) {
+      $result = userData();
+    }
+    if (isset($_POST['newMail'])) {
+      $data = [
+        ':newMail' => test_input($_POST['newMail']),
+        ':id' => $_GET['id']
+      ];
+      $statement = changeMail($data);
+    }
+    if (isset($_POST['newPassword'])){
+      $data=[
+        ':newPassword' => test_input(password_hash($_POST['newPassword'], PASSWORD_DEFAULT)),
+        ':id' => $_GET['id']
+      ];
+     
+      $statement = changePassword($data);
+    }
+    
+  } else {
+    $message = "Accès refusé !!!";
   }
-  if(isset($_GET['id']))
-  {
-   $result = userData();}
   require('./view/profileView.php');
 }
