@@ -9,6 +9,35 @@ include('header.php')
 <div id="user"></div>
 <div id="commen"></div>
 
+<!-- Comments -->
+
+<h2>Commentaires</h2>
+<?php
+//include('./controller/controller.php');
+
+$comments = getCommentsSerie($_GET['id']);
+while ($data = $comments->fetch())
+{
+?>
+    <h3><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
+    <p><?=nl2br(htmlspecialchars($data['comment']));} ?></p>
+<p></p>
+
+
+<form action="index.php?action=addComment&id=<?= $_GET['id'] ?>" method="post">
+    <div>
+        <label for="username">Username</label><br />
+        <input type="text" id="username" name="username" />
+    </div>
+    <div>
+        <label for="comment">Comment</label><br />
+        <textarea id="comment" name="comment"></textarea>
+    </div>
+    <div>
+        <input type="submit" />
+    </div>
+</form>
+
 <script>
 let serieId = '<?=$_GET['id']?>'
 console.log(serieId)

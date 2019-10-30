@@ -62,6 +62,7 @@ a:hover {
 hr {
   color: black;
   font-size: bolder;
+
 }
 
 .lpBg {
@@ -75,4 +76,5 @@ hr {
   .DDM {
     left: -100%;
   }
+
 }

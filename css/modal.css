@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Crushed");
+body {
+   background: url("https://s25.postimg.org/6z70aj2gf/usa_california_sunset_spring_wide.jpg") no-repeat center center fixed;
+   
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   background-color: #f4cf05;
+   text-align: center;
+}
+
+.bs-example {
+   margin-top: 10%;
+}
+
+.bs-example2 {
+   margin-top: 1.5em;
+   font-weight: bold;
+   font-size: 1.25em;
+   color: #FFF;
+   text-shadow: 1.25px 1px #25282a;
+}

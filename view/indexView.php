@@ -10,9 +10,10 @@ include('header.php');
 
 <h1 class="container text-center mb-0 pt-3 pb-3">MOVIES</h1>
 
-
+<div class="bs-example">
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 <!--Carousel Movies-->
-<div id="carouselMovies" class="carousel slide container" >
+<div id="carouselMovies" class="carousel slide " >
   <div class="carousel-inner ">
 
     <div  class="carousel-item test active ">
@@ -79,97 +80,121 @@ include('header.php');
 <div class="">
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3 ">Action</h3>
-      <a href="index.php?action=categoryFilm&id=28">See more...</a>
+      <a href="index.php?action=category&id=28">See more...</a>
     </div>
+
     <div id="action" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3">Adventure</h3>
-      <a href="index.php?action=categoryFilm&id=12">See more...</a>
+      <a href="index.php?action=category&id=12">See more...</a>
     </div>
+
     <div id="adventure" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3">Animation</h3>
-      <a href="index.php?action=categoryFilm&id=16">See more...</a>
+      <a href="index.php?action=category&id=16">See more...</a>
     </div>
+
     <div id="animation" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3">Comedy</h3>
-      <a href="index.php?action=categoryFilm&id=35">See more...</a>
+      <a href="index.php?action=category&id=35">See more...</a>
     </div>
+
     <div id="comedy" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Crime</h3>
-    <a href="index.php?action=categoryFilm&id=80">See more...</a>
+    <a href="index.php?action=category&id=80">See more...</a>
     </div>
+
     <div id="crime" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Documentary</h3>
-    <a href="index.php?action=categoryFilm&id=99">See more...</a>
+    <a href="index.php?action=category&id=99">See more...</a>
     </div>
+
     <div id="documentary" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Drama</h3>
-    <a href="index.php?action=categoryFilm&id=28">See more...</a>
+    <a href="index.php?action=category&id=28">See more...</a>
     </div>
+
     <div id="drama" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Family</h3>
-    <a href="index.php?action=categoryFilm&id=10751">See more...</a>
+    <a href="index.php?action=category&id=10751">See more...</a>
     </div>
+
     <div id="family" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Fantasy</h3>
-    <a href="index.php?action=categoryFilm&id=14">See more...</a>
+    <a href="index.php?action=category&id=14">See more...</a>
     </div>
+
     <div id="fantasy" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">History</h3>
-    <a href="index.php?action=categoryFilm&id=36">See more...</a>
+    <a href="index.php?action=category&id=36">See more...</a>
     </div>
+
     <div id="history" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Horror</h3>
-    <a href="index.php?action=categoryFilm&id=27">See more...</a>
+    <a href="index.php?action=category&id=27">See more...</a>
     </div>
+
     <div id="horror" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Music</h3>
-    <a href="index.php?action=categoryFilm&id=10402">See more...</a>
+    <a href="index.php?action=category&id=10402">See more...</a>
     </div>
+
     <div id="music" class="d-flex flex-wrap justify-content-between"></div>
+
   </div>
 </section>
 
@@ -216,7 +241,7 @@ include('header.php');
     function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
-            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
           }else if (i<10){
             document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
           }else if(i<15){
@@ -252,7 +277,7 @@ include('header.php');
 
 
 
-
+    //FETCH CATEGORIES
     function getCategory(id,nbrToShow, category){
       fetch(`https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&&with_genres=${id}`)
       .then(response => response.json())
@@ -289,6 +314,31 @@ function modal(i){
 }
 }
     </script>
+
+    <!-- Button trigger modal-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCookie1">Régle RGPD</button>
+
+<!--Modal: modalCookie-->
+<div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center align-items-center">
+
+          <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+          <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
+          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalCookie--
 
 <?php
 include('footer.php')

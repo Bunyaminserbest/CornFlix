@@ -14,12 +14,35 @@ if ($user_id ) {
     }elseif ($_GET['action']== 'Contact-us'){
         contact();
     }elseif ($_GET['action']== 'profil'){
-        require('./view/profileView.php');
+        profile();
     }else if($_GET['action'] == 'categoryFilm'){
         require('./view/categoryFilmView.php');
     }else if($_GET['action'] == 'player'){
-
         comments();
+    }else if($_GET['action'] == 'search'){
+        require('./view/searchView.php');
+    }
+    
+    elseif ($_GET['action'] == 'addComment') {
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            if (!empty($_POST['username']) && !empty($_POST['comment'])) {
+                addComment($_GET['id'], $_POST['username'], $_POST['comment']);
+            }else {
+                echo 'Erreur : tous les champs ne sont pas remplis !';
+            }
+        }else {
+            echo 'Erreur : aucun identifiant de billet envoyé';
+        }
+    }elseif ($_GET['action'] == 'addCommentSerie') {
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            if (!empty($_POST['username']) && !empty($_POST['comment'])) {
+                addCommentSerie($_GET['id'], $_POST['username'], $_POST['comment']);
+            }else {
+                echo 'Erreur : tous les champs ne sont pas remplis !';
+            }
+        }else {
+            echo 'Erreur : aucun identifiant de billet envoyé';
+        }
     }else if($_GET['action'] == 'playerSeries'){
         require('./view/playerSeriesView.php');
     }else if($_GET['action'] == 'categorySerie'){

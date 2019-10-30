@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/carousel.css">
   <script src="https://kit.fontawesome.com/09a3209f4f.js" crossorigin="anonymous"></script>
   <script src="./js/carousel.js"></script>
-  <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
   <title><?= $title?></title>
 </head>
 <body>
@@ -72,9 +74,12 @@
       
     </ul>
     <?php if(isset($_SESSION['user_id'])){
-      echo '<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
-      <input class="form-control mr-sm-2 text-center" type="search" placeholder="Search" aria-label="Search">
+
+      echo '<form action=""  method="Get" class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+      <input type="hidden" name="action" value="search">
+      <input class="form-control mr-sm-2 text-center" name="query" type="search" placeholder="Search" aria-label="Search">
       <button class="my-2 my-sm-0 searchBtn col-md-3" type="submit">Search</button>
+
     </form>
 
     <div class="dropdown d-flex justify-content-center">
@@ -82,7 +87,7 @@
      </button>
      <div class="dropdown-menu col-md-2 text-center DDM">
       <a class="dropdown-item" href="./index.php?action=login">Sign-in</a>
-      <a class="dropdown-item" href="./index.php?action=profil">My profil</a>
+      <a class="dropdown-item" href="./index.php?action=profil&id='.$_SESSION['user_id'].'">My profil</a>
       <a class="dropdown-item" href="#">My list</a>
       <a class="dropdown-item" href="./view/logout.php">Logout</a>
     </div>
