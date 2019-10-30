@@ -3,7 +3,7 @@
 function connect_db()
 {
   try {
-    $db = new PDO('mysql:host=localhost;dbname=cornflix', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=Cornflix', 'root', '');
     return $db;
   } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
