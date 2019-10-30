@@ -74,8 +74,9 @@
       
     </ul>
     <?php if(isset($_SESSION['user_id'])){
-      echo '<form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      echo '<form action=""  method="Get" class="form-inline my-2 my-lg-0">
+      <input type="hidden" name="action" value="search">
+      <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
       <button class="my-2 my-sm-0 searchBtn" type="submit">Search</button>
     </form>
 

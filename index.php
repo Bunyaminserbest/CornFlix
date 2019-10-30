@@ -19,6 +19,8 @@ if ($user_id ) {
         require('./view/categoryFilmView.php');
     }else if($_GET['action'] == 'player'){
         comments();
+    }else if($_GET['action'] == 'search'){
+        require('./view/searchView.php');
     }
     
     elseif ($_GET['action'] == 'addComment') {
