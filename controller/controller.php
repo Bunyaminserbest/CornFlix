@@ -96,6 +96,28 @@ function addComment($id_movie, $username, $comment)
     header('Location: ./index.php?action=player&id=' . $id_movie);
   }
 }
+function commentsSerie()
+{
+  if (isset($_GET['id']) && $_GET['id'] > 0) {
+    $comments = getCommentsSerie($_GET['id']);
+  } else {
+    echo 'Erreur : aucun identifiant de billet envoyé';
+  }
+  require('./view/playerSeriesView.php');
+}
+
+
+
+function addCommentSerie($id_serie, $username, $comment)
+{
+  $affectedLines = postCommentSerie($id_serie, $username, $comment);
+
+  if ($affectedLines === false) {
+    die('Cannot add comment');
+  } else {
+    header('Location: ./index.php?action=playerSeries&id=' . $id_serie);
+  }
+}
 function image()
 {
   $target_dir = "avatar/";
