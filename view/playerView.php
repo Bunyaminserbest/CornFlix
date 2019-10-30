@@ -23,6 +23,22 @@ while ($data = $comments->fetch())
 <p></p>
 
 
+<form action="index.php?action=addComment&id=<?= $_GET['id'] ?>" method="post">
+    <div>
+        <label for="username">Username</label><br />
+        <input type="text" id="username" name="username" />
+    </div>
+    <div>
+        <label for="comment">Comment</label><br />
+        <textarea id="comment" name="comment"></textarea>
+    </div>
+    <div>
+        <input type="submit" />
+    </div>
+</form>
+
+
+
 
 
 <script>

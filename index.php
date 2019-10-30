@@ -18,9 +18,24 @@ if ($user_id ) {
     }else if($_GET['action'] == 'categoryFilm'){
         require('./view/categoryFilmView.php');
     }else if($_GET['action'] == 'player'){
-
         comments();
-    }else if($_GET['action'] == 'playerSeries'){
+    }
+    
+    elseif ($_GET['action'] == 'addComment') {
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            if (!empty($_POST['username']) && !empty($_POST['comment'])) {
+                addComment($_GET['id'], $_POST['username'], $_POST['comment']);
+            }
+            else {
+                echo 'Erreur : tous les champs ne sont pas remplis !';
+            }
+        }
+        else {
+            echo 'Erreur : aucun identifiant de billet envoyé';
+        }
+    }
+
+    else if($_GET['action'] == 'playerSeries'){
         require('./view/playerSeriesView.php');
     }else if($_GET['action'] == 'categorySerie'){
         require('./view/categorySerieView.php');
