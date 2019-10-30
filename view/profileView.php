@@ -44,22 +44,24 @@
       if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
           $array = explode('.', $_FILES['avatar']['name']);
           $fileName = $array[0];
-            
+            return $target_file;
       } else {
           echo "Sorry, there was an error uploading your file.";
       }
     }
     }
     }
+
     //condition pour rentré dans la ddb
-  if(isset($_POST['avatar'])){
+  if(isset($_FILES['avatar'])){
+  $target_file = image();
   $db = connect_db();
   $data=[':avatar'=> $target_file,':id' => $_GET['id']];
-    var_dump($data);
-  $query="INSERT INTO login (avatar) VALUES (:avatar) WHERE user_id = :id";
+    
+  $query="UPDATE login SET avatar=:avatar WHERE user_id = :id";
   $statement = $db->prepare($query);
   $result = $statement->execute($data);
-    var_dump($result);
+   
     return $result;
     }
 
@@ -69,13 +71,14 @@
       $getId = $_GET['id'];
       $sql= "SELECT * FROM login WHERE user_id = $getId";
       foreach ($bdd->query($sql) as $row) {
+        
 ?>
    <div class="p-5">
     <h1><i class="fas fa-user-alt "></i> Profil of <?= $row['username'];?></h1>
     <hr>
     <ul>
         <img src="<?= $row["avatar"];?>" alt="Avatar">   
-        <?php var_dump($row['avatar']) ?>     
+            
         <ul>
           <li>
             username : <?= $row['username'];?>
@@ -91,8 +94,7 @@
           </li>
         </ul>
         <?=image();?>
-        <form method="POST" action="./view/
-        test.php" enctype="multipart/form-data">
+        <form method="POST" action="" enctype="multipart/form-data">
           <label for="avatar"> Add avatar</label>
           <input type="file" name="avatar">
           <button type="submit" class="btn btn-primary">Submit</button><br><br>
