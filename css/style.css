@@ -2,6 +2,7 @@ body {
   background-color: #4A0100 !important;
   color: white !important;
   width: 100%;
+
   height: 100vh;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -12,6 +13,7 @@ body {
   color: white !important;
   background-color: rgb(46, 0, 0)!important;
   border-color: #4A0100;
+
 }
 .searchBtn {
   height: 37px;
@@ -83,6 +85,7 @@ hr {
   color: black;
   font-size: bolder;
 }
+
 .lpBg {
   width: 100%;
   height: 100%;
@@ -98,11 +101,32 @@ hr {
     height : 50% !important;
   }
   @media screen and (min-width : 700px) {
+
   .DDM {
-  left: -100%;
+    left: -100%;
   }
+
+}
+
+.jumbotron {
+  position: absolute;
+  background-color: white;
+  top: 25%;
+  left: 33%;
+  width: 400px;
+  height: 300px;
+  opacity: 0.6;
+}
+
+.lpBg {
+  position: relative;
+  width: 100%;
+  height: 79vh;
+}
+
   #carouselMovies{
     justify-content: center;
     margin:auto;
   }
   }
+

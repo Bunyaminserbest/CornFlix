@@ -1,6 +1,6 @@
-img{
+/*img{
 padding: 1%;
-}
+}*/
 
 /*.carousel-items{
       justify-content: center;
@@ -19,9 +19,10 @@ padding: 1%;
 /*CAROUSEL*/
 .carousel-item.active {
       display: flex;
-      
+
 }
-.carousel-inner>div{
+
+.carousel-inner>div {
       justify-content: center;
 }
 .carousel-item>div>a{
@@ -29,11 +30,13 @@ padding: 1%;
       
 }
 
-.section{
+.section {
       display: flex;
       flex-direction: column;
 }
-.genres{
+
+.genres {
       justify-content: center;
 }
+
 
