@@ -25,8 +25,8 @@ if ($user_id ) {
     
     elseif ($_GET['action'] == 'addComment') {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
-            if (!empty($_POST['username']) && !empty($_POST['comment'])) {
-                addComment($_GET['id'], $_POST['username'], $_POST['comment']);
+            if (  !empty($_POST['comment'])) {
+                addComment($_GET['id'], $_SESSION['username'], $_POST['comment']);
             }else {
                 echo 'Erreur : tous les champs ne sont pas remplis !';
             }
@@ -35,8 +35,8 @@ if ($user_id ) {
         }
     }elseif ($_GET['action'] == 'addCommentSerie') {
         if (isset($_GET['id']) && $_GET['id'] > 0) {
-            if (!empty($_POST['username']) && !empty($_POST['comment'])) {
-                addCommentSerie($_GET['id'], $_POST['username'], $_POST['comment']);
+            if (!empty($_POST['comment'])) {
+                addCommentSerie($_GET['id'], $_SESSION['username'], $_POST['comment']);
             }else {
                 echo 'Erreur : tous les champs ne sont pas remplis !';
             }

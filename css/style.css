@@ -2,7 +2,6 @@ body {
   background-color: #4A0100 !important;
   color: white !important;
   width: 100%;
-
   height: 100vh;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -45,19 +44,23 @@ footer>ul {
 
 .navLi {
   list-style: none;
-  /*margin: auto;*/
   font-size: small;
 }
 
 .navUl {
   width: 50%;
   margin: auto;
+  
+}
+.navmenu{
+  margin-left:-12%;
 }
 
+.form-inline{
+  margin-right:-2%;
+}
 a {
   color: inherit;
-
-
 }
 
 a:hover {
@@ -125,10 +128,14 @@ img {
   height: 79vh;
 }
 
-#carouselMovies {
-  justify-content: center;
-  margin: auto;
-}
+
+
+  #carouselMovies{
+    justify-content: center;
+    margin:auto;
+  }
+  
+
 
 
 
