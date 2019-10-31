@@ -1,11 +1,18 @@
 body {
-  background-color: #4A0100;
-  color: white;
+  background-color: #4A0100 !important;
+  color: white !important;
   width: 100%;
   height: 100vh;
-
+  font-family: 'Ubuntu', sans-serif;
 }
-
+.bg-color{
+  background-color: #4A0100;
+}
+.search{
+  color: white !important;
+  background-color: rgb(46, 0, 0)!important;
+  border-color: #4A0100;
+}
 .searchBtn {
   height: 37px;
   color: white;
@@ -25,10 +32,14 @@ body {
 .footerBgrd {
   background-color: rgb(46, 0, 0);
 }
+footer > ul{
+justify-content:space-between;
+
+}
 
 .navLi {
   list-style: none;
-  margin: auto;
+  /*margin: auto;*/
   font-size: small;
 }
 
@@ -72,9 +83,21 @@ hr {
   height: 100%;
   
   }
-  
+
+  img{
+    height: 280px;
+    width:204px;
+  }
+  .logo{
+    width: 50% !important;
+    height : 50% !important;
+  }
   @media screen and (min-width : 700px) {
   .DDM {
   left: -100%;
+  }
+  #carouselMovies{
+    justify-content: center;
+    margin:auto;
   }
   }
