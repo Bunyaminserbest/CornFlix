@@ -9,11 +9,11 @@
     }else{
       foreach ($result as $row) {
 ?>
-  <section class="p-5">
+  <section class=" border rounded-top text-center p-5">
     <p><?php ?></p>
     <h1><i class="fas fa-user-alt "></i> Profil of <?= $row['username'];?></h1>
     <hr>
-    <img src="<?= $row["avatar"];?>" alt="avatar profile" class="rounded-circle">
+    <img src="<?php if($row['avatar']!= ""){ echo $row["avatar"];}else{echo "./avatar/defaultAvatar.png";}?>" alt="avatar profile" class="rounded-circle">
      
     <ul>
       <li>
@@ -31,7 +31,7 @@
     </ul> 
     <form method="POST" action="" enctype="multipart/form-data">
       <label for="avatar"> Add avatar</label>
-        <input type="file" name="avatar">
+        <input type="file" class= name="avatar">
         <button type="submit" class="btn btn-danger">Submit</button><br><br>
     </form>  
     <p>

@@ -11,8 +11,8 @@ include('header.php')
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 <body>
@@ -29,7 +29,7 @@ include('header.php')
       
           <h6 class="font-weight-normal text-uppercase font-small grey-text mb-4 text-center">FAQ</h6>
           <!-- Section heading -->
-          <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">Service d'aide</h3>
+          <h3 class="font-weight-bold white-text mb-4 pb-2 text-center">Service d'aide</h3>
           <hr class="w-10">
           <!-- Section description -->
           <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">Got a question? We've got answers. If you have some other questions, see our support center.</p>
@@ -47,7 +47,7 @@ include('header.php')
                   <section class="card-header bg-color border-bottom border-light" role="tab" id="headingOne1">
                     <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
                       aria-controls="collapseOne1">
-                      <h5 class="black-text font-weight-normal mb-0">
+                      <h5 class="white-text font-weight-normal mb-0">
                           Qu'est ce que Kornflix?<i class="fas fa-angle-down rotate-icon"></i>
                       </h5>
                     </a>
@@ -56,7 +56,7 @@ include('header.php')
                   <!-- Card body -->
                   <section id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
                     data-parent="#accordionEx">
-                    <section class="card-body bg-color">
+                    <section class="card-body bg-color ">
                         Streaming Kornflix Kornflix est un service de diffusion en streaming qui permet à ses membres 
                         de regarder une grande variété de séries TV, films, documentaires, etc. 
                         sur des milliers d'appareils connectés à Internet. Avec Kornflix, 
@@ -78,14 +78,14 @@ include('header.php')
                   <section class="card-header bg-color border-bottom border-light" role="tab" id="headingTwo2">
                     <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
                       aria-expanded="false" aria-controls="collapseTwo2">
-                      <h5 class="black-text font-weight-normal mb-0">
+                      <h5 class="white-text font-weight-normal mb-0">
                           Facturation et paiement<i class="fas fa-angle-down rotate-icon"></i>
                       </h5>
                     </a>
                   </section>
       
                   <!-- Card body -->
-                  <sectionid="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                  <section id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
                     data-parent="#accordionEx">
                     <section class="card-body bg-color">
                         Kornflix est un service d'abonnement prépayé permettant de regarder un nombre illimité de séries TV 
@@ -108,7 +108,7 @@ include('header.php')
                   <section class="card-header bg-color border-bottom border-light" role="tab" id="headingThree3">
                     <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
                       aria-expanded="false" aria-controls="collapseThree3">
-                      <h5 class="black-text font-weight-normal mb-0">
+                      <h5 class="white-text font-weight-normal mb-0">
                           J'ai des problème d'images lorsque j'essaie de regarder Kornflix
                           <i class="fas fa-angle-down rotate-icon"></i>
                       </h5>
@@ -139,7 +139,7 @@ include('header.php')
                   <section class="card-header bg-color border-bottom border-light" role="tab" id="headingThree4">
                     <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree4"
                       aria-expanded="false" aria-controls="collapseThree4">
-                      <h5 class="black-text font-weight-normal mb-0">
+                      <h5 class="white-text font-weight-normal mb-0">
                           Je ne parviens pas à m'Identifier <i class="fas fa-angle-down rotate-icon"></i>
                       </h5>
                     </a>
