@@ -5,15 +5,18 @@ body {
   height: 100vh;
   font-family: 'Ubuntu', sans-serif;
 }
-.bg-color{
+
+.bg-color {
   background-color: #4A0100;
 }
-.search{
+
+.search {
   color: white !important;
-  background-color: rgb(46, 0, 0)!important;
+  background-color: rgb(46, 0, 0) !important;
   border-color: #4A0100;
 
 }
+
 .searchBtn {
   height: 37px;
   color: white;
@@ -33,8 +36,9 @@ body {
 .footerBgrd {
   background-color: rgb(46, 0, 0);
 }
-footer > ul{
-justify-content:space-between;
+
+footer>ul {
+  justify-content: space-between;
 
 }
 
@@ -87,18 +91,20 @@ hr {
 .lpBg {
   width: 100%;
   height: 100%;
-  
-  }
 
-  img{
-    height: 280px;
-    width:204px;
-  }
-  .logo{
-    width: 50% !important;
-    height : 50% !important;
-  }
-  @media screen and (min-width : 700px) {
+}
+
+img {
+  height: 280px;
+  width: 204px;
+}
+
+.logo {
+  width: 50% !important;
+  height: 50% !important;
+}
+
+@media screen and (min-width : 700px) {
 
   .DDM {
     left: -100%;
@@ -122,9 +128,26 @@ hr {
   height: 79vh;
 }
 
+
+
   #carouselMovies{
     justify-content: center;
     margin:auto;
   }
   
 
+
+
+
+.inputComsForm {
+  padding: 10px;
+  border: 1px solid rgb(46, 0, 0);
+  background-color: rgb(46, 0, 0);
+  border-radius: 5px;
+
+}
+
+.comInput {
+  width: 100%;
+  border-radius: 5px;
+}
