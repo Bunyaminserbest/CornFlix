@@ -9,8 +9,9 @@ include('header.php');
 
 
 <!-- Comments -->
-
-<h2>Commentaires</h2>
+<div class="container">
+<h2 >Commentaires</h2>
+<hr>
 <?php
 //include('./controller/controller.php');
 
@@ -18,25 +19,24 @@ $comments = getComments($_GET['id']);
 while ($data = $comments->fetch())
 {
 ?>
-    <h3><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
+<div>
+<div class="d-flex align-items-baseline">
+    <h3 class="mr-2"><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
+</div>
     <p><?=nl2br(htmlspecialchars($data['comment']));} ?></p>
-<p></p>
+</div>
 
-
-<form action="index.php?action=addComment&id=<?= $_GET['id'] ?>" method="post">
-    <div>
-        <label for="username">Username</label><br />
-        <input type="text" id="username" name="username" />
-    </div>
-    <div>
+<form action="index.php?action=addComment&id=<?= $_GET['id'] ?>" method="post" class="inputComsForm">
+    
+    <div >
         <label for="comment">Comment</label><br />
-        <textarea id="comment" name="comment"></textarea>
+        <textarea id="comment" class="comInput" name="comment"></textarea>
     </div>
     <div>
         <input type="submit" />
     </div>
 </form>
-
+</div>
 
 
 
