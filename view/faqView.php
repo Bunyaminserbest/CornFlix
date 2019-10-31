@@ -2,7 +2,10 @@
 $title = 'FAQ';
 include('header.php')
 ?>
-</head>
+
+
+
+
 
     <div class="container my-5">
 
