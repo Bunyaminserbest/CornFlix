@@ -16,24 +16,26 @@
     <img src="<?php if($row['avatar']!= ""){ echo $row["avatar"];}else{echo "./avatar/defaultAvatar.png";}?>" alt="avatar profile" class="rounded-circle">
      
     <ul>
-      <li>
+      <li class="profile">
         username : <?= $row['username'];?>
       </li>
-      <li>
+      <li class="profile">
         name : <?= $row['name'];?>
       </li>
-      <li>
+      <li class="profile">
         lastname : <?= $row['lastname'];?>
       </li>
-      <li>
+      <li class="profile">
         email : <?= $row['email'];}}?>
       </li>
-    </ul> 
-    <form method="POST" action="" enctype="multipart/form-data">
-      <label for="avatar"> Add avatar</label>
-        <input type="file" class= name="avatar">
-        <button type="submit" class="btn btn-danger">Submit</button><br><br>
-    </form>  
+    </ul>
+    <section class="addAvatar border rounded-top">
+      <form method="POST" action="" enctype="multipart/form-data">
+        <label for="avatar"> Add avatar</label>
+          <input type="file" class= name="avatar">
+          <button type="submit" class="btn btn-danger">Submit</button><br><br>
+      </form> 
+      </section>   
     <p>
       <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         New Mail
