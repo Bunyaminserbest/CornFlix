@@ -3,15 +3,14 @@
 $title= 'KornFlix'; 
 include('header.php');
 ?>
-
-<h1>T'es bien connecté</h1>
-  <a href="view/logout.php">Deconnection</a>
-
+<section class="container text-center">
+<h1>Welcome <?= $_SESSION['username'] ?></h1>
+  <h2>What do you wanna watch today?</h2>
+</section>
 
 <h1 class="container text-center mb-0 pt-3 pb-3">MOVIES</h1>
 
-<div class="bs-example">
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
 <!--Carousel Movies-->
 <div id="carouselMovies" class="carousel slide " >
   <div class="carousel-inner ">
@@ -45,7 +44,7 @@ include('header.php');
 <h1 class="container text-center mb-0 pt-3 pb-3">SERIES</h1>
 <!--Carousel tvShow-->
 
-<div id="carouselTvShow" class="carousel slide container">
+<div id="carouselTvShow" class="carousel slide">
   <div class="carousel-inner ">
     
     <div  class="carousel-item test active">
@@ -74,13 +73,13 @@ include('header.php');
 </div>
 
 
-
+<!--Categories-->
 
 <section id="genres" class="container" >
 <div class="">
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3 ">Action</h3>
-      <a href="index.php?action=category&id=28">See more...</a>
+      <a href="index.php?action=categoryFilm&id=28">See more...</a>
     </div>
     <div id="action" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -88,7 +87,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3">Adventure</h3>
-      <a href="index.php?action=category&id=12">See more...</a>
+      <a href="index.php?action=categoryFilm&id=12">See more...</a>
     </div>
     <div id="adventure" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -96,7 +95,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3">Animation</h3>
-      <a href="index.php?action=category&id=16">See more...</a>
+      <a href="index.php?action=categoryFilm&id=16">See more...</a>
     </div>
     <div id="animation" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -104,7 +103,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
       <h3 class="pr-3">Comedy</h3>
-      <a href="index.php?action=category&id=35">See more...</a>
+      <a href="index.php?action=categoryFilm&id=35">See more...</a>
     </div>
     <div id="comedy" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -112,23 +111,15 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Crime</h3>
-    <a href="index.php?action=category&id=80">See more...</a>
+    <a href="index.php?action=categoryFilm&id=80">See more...</a>
     </div>
     <div id="crime" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
 
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
-    <h3 class="pr-3">Documentary</h3>
-    <a href="index.php?action=category&id=99">See more...</a>
-    </div>
-    <div id="documentary" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
-  </div>
-
-  <div>
-    <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Drama</h3>
-    <a href="index.php?action=category&id=28">See more...</a>
+    <a href="index.php?action=categoryFilm&id=28">See more...</a>
     </div>
     <div id="drama" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -136,7 +127,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Family</h3>
-    <a href="index.php?action=category&id=10751">See more...</a>
+    <a href="index.php?action=categoryFilm&id=10751">See more...</a>
     </div>
     <div id="family" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -144,7 +135,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Fantasy</h3>
-    <a href="index.php?action=category&id=14">See more...</a>
+    <a href="index.php?action=categoryFilm&id=14">See more...</a>
     </div>
     <div id="fantasy" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -152,7 +143,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">History</h3>
-    <a href="index.php?action=category&id=36">See more...</a>
+    <a href="index.php?action=categoryFilm&id=36">See more...</a>
     </div>
     <div id="history" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -160,7 +151,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Horror</h3>
-    <a href="index.php?action=category&id=27">See more...</a>
+    <a href="index.php?action=categoryFilm&id=27">See more...</a>
     </div>
     <div id="horror" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -168,7 +159,7 @@ include('header.php');
   <div>
     <div class="d-flex align-items-center pt-3 pb-3">
     <h3 class="pr-3">Music</h3>
-    <a href="index.php?action=category&id=10402">See more...</a>
+    <a href="index.php?action=categoryFilm&id=10402">See more...</a>
     </div>
     <div id="music" class="d-flex justify-content-between" style="display: flex;flex-wrap: wrap;"></div>
   </div>
@@ -177,36 +168,6 @@ include('header.php');
 
 <script>
   
-   /* function details() {
-      var data = "{}";
-
-      var xhr = new XMLHttpRequest();
-
-
-      xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === this.DONE) {
-          let details = JSON.parse(this.responseText)
-          console.log(details.results)
-          for(i=0; i<2; i++){
-          document.getElementById(`poster${i}`).src = "https://image.tmdb.org/t/p/w200/" + details.results[i].poster_path
-          //document.getElementById("poster2").src = "https://image.tmdb.org/t/p/w200/" + details.poster_path
-          /*document.getElementById("title").innerHTML = details.title
-          document.getElementById("genres").innerHTML = details.genres[0].name
-          document.getElementById("lang").innerHTML = "Language: " + details.original_language
-          document.getElementById("overview").innerHTML = details.overview
-          document.getElementById("vote").innerHTML = "Vote: " + details.vote_average + "/10"
-          document.getElementById("release").innerHTML = details.release_date[0]
-
-
-
-        }
-      });
-
-      xhr.open("GET","https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1");
-
-      xhr.send(data);
-    }*/
-
     /*FETCH MOVIES API*/
     fetch("https://api.themoviedb.org/3/discover/movie?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US")
     .then(response => response.json())
@@ -217,13 +178,13 @@ include('header.php');
     function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
-            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
           }else if (i<10){
-            document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
           }else if(i<15){
-            document.getElementById(`movie3`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+            document.getElementById(`movie3`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
           }else{
-          document.getElementById(`movie4`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`movie4`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }
       }
        
@@ -240,13 +201,13 @@ include('header.php');
     function getTvshow(movies){
       for(i=0; i<20; i++){
         if (i<5){
-          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }else if (i<10){
-          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }else if(i<15){
-          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }else{
-          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt=""></a>`
+          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }
       }
     }
@@ -272,7 +233,6 @@ getCategory(12,5,"adventure")
 getCategory(16,5,"animation")
 getCategory(35,5,"comedy")
 getCategory(80,5,"crime")
-getCategory(99,5,"documentary")
 getCategory(28,5,"drama")
 getCategory(10751,5,"family")
 getCategory(14,5,"fantasy")
@@ -281,40 +241,32 @@ getCategory(27,5,"horror")
 getCategory(10402,5,"music")
 
 
-function modal(i){
-  document.getElementById(`post0`).onclick = function(){
-    console.log("hello")
-    document.getElementById(`post0`).innerHTML += `Hello`
-
-  
-}
-}
+$(document).ready(function(){
+        $("#myModal").modal('show');
+    });
     </script>
 
-    <!-- Button trigger modal-->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCookie1">Régle RGPD</button>
-
-<!--Modal: modalCookie-->
-<div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true" data-backdrop="true">
-  <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
-    <!--Content-->
+    <!-- Modal -->
+<div class="modal fade top" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fluid modal-full-height modal-top" role="document">
     <div class="modal-content">
-      <!--Body-->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalPreviewLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div class="modal-body">
-        <div class="row d-flex justify-content-center align-items-center">
-
-          <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
-
-          <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
-          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
-        </div>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
-    <!--/.Content-->
   </div>
 </div>
-<!--Modal: modalCookie--
+<!-- Modal -->
 
 <?php
 include('footer.php')

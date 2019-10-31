@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/carousel.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/09a3209f4f.js" crossorigin="anonymous"></script>
   <script src="./js/carousel.js"></script>
-    <script src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
+  <link rel="icon" type="image/jpg" href="./klogo.jpg" />
   <title><?= $title?></title>
 </head>
 <body>
@@ -22,7 +24,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark navbarStyle">
-  <a class="navbar-brand" href="./index.php?action=home">KornFlix</a>
+  <a class="navbar-brand" href="./index.php?action=home"><img class="logo" src="./logo-crop.png" alt="logo Kornflix"></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -74,10 +76,10 @@
       
     </ul>
     <?php if(isset($_SESSION['user_id'])){
-      echo '<form action=""  method="Get" class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+      echo '<form action=""  method="Get" class="form-inline my-2 my-lg-0 ">
       <input type="hidden" name="action" value="search">
-      <input class="form-control mr-sm-2 text-center" name="query" type="search" placeholder="Search" aria-label="Search">
-      <button class="my-2 my-sm-0 searchBtn col-md-3" type="submit">Search</button>
+      <input class="search form-control mr-sm-2 text-center" name="query" type="search" placeholder="Search" aria-label="Search">
+      <button class="my-2 my-sm-0 searchBtn btn" type="submit">Search</button>
     </form>
 
     <div class="dropdown d-flex justify-content-center">

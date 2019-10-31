@@ -30,10 +30,6 @@ include('header.php');
 <input type="password" class="form-control px-4" id="password2" placeholder="" name="Confirmpassword" required>
 </section>
 <section class="form-group form-check">
-<input type="checkbox" class="form-check-input" id="newsletter"name="newsletter" >
-<label class="form-check-label" for="newsletter">I will subscribe to the newsletter</label>
-</section>
-<section class="form-group form-check">
 <input type="checkbox" class="form-check-input" id="acceptCGV" name="acceptCGV"required>
 <label class="form-check-label" for="acceptCGV">I have read and accpet the <a href="./index.php?action=cgv">CGV</a></label>
 </section>
