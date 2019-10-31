@@ -46,6 +46,9 @@ justify-content:space-between;
 .navUl {
   width: 50%;
   margin: auto;
+  
+}
+.navmenu{
   margin-left:-12%;
 }
 

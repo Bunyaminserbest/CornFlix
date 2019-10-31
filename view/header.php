@@ -31,11 +31,11 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto navUl">
-      <li class="nav-item active navUl col-md-2 col-sm-12">
+    <ul class="navmenu navbar-nav mr-auto navUl">
+      <li class="navmenu nav-item active navUl col-md-2 col-sm-12">
         <a class="nav-link" href="./index.php?action=home">Accueil <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown navUl col-md-2">
+      <li class="navmenu nav-item dropdown navUl col-md-2">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Films
         </a>
@@ -53,7 +53,7 @@
           <a class="dropdown-item" href="./index.php?action=categoryFilm&id=10402">Music</a>
         </div>
       </li>
-      <li class="nav-item dropdown navUl col-md-2">
+      <li class="navmenu nav-item dropdown navUl col-md-2">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Series
         </a>
