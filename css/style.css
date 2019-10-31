@@ -2,7 +2,6 @@ body {
   background-color: #4A0100 !important;
   color: white !important;
   width: 100%;
-
   height: 100vh;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -38,9 +37,7 @@ footer > ul{
 justify-content:space-between;
 
 }
-.navbar-nav{
-  float: left !important;
-}
+
 .navLi {
   list-style: none;
   font-size: small;
@@ -49,16 +46,14 @@ justify-content:space-between;
 .navUl {
   width: 50%;
   margin: auto;
-  margin-left: -12%;
-}
-.form-inline{
-  margin-right: 2%;
+  margin-left:-12%;
 }
 
+.form-inline{
+  margin-right:-2%;
+}
 a {
   color: inherit;
-
-
 }
 
 a:hover {
@@ -128,5 +123,5 @@ hr {
     justify-content: center;
     margin:auto;
   }
-  }
+  
 
