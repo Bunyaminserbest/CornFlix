@@ -1,6 +1,5 @@
 <!-- FOOTER -->
-
-<footer class="container-fluid  footerBgrd mt-5 pt-3 pb-3">
+<footer class="container-fluid  footerBgrd  pt-3 pb-3 ">
 
   <ul class="d-flex navUl">
     <li class="navLi">
