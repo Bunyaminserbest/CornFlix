@@ -16,13 +16,17 @@ padding: 1%;
       transition: transform .6s ease-in-out;
       transition: transform .6s ease-in-out, -webkit-transform .6s;
 }
-
+/*CAROUSEL*/
 .carousel-item.active {
       display: flex;
       
 }
 .carousel-inner>div{
       justify-content: center;
+}
+.carousel-item>div>a{
+      padding:1%;
+      
 }
 
 .section{
@@ -32,7 +36,4 @@ padding: 1%;
 .genres{
       justify-content: center;
 }
-/*#carousels{
-      display: flex;
-      flex-direction: column !important;
-}*/
+

@@ -36,16 +36,21 @@ footer > ul{
 justify-content:space-between;
 
 }
-
+.navbar-nav{
+  float: left !important;
+}
 .navLi {
   list-style: none;
-  /*margin: auto;*/
   font-size: small;
 }
 
 .navUl {
   width: 50%;
   margin: auto;
+  margin-left: -12%;
+}
+.form-inline{
+  margin-right: 2%;
 }
 
 a {
