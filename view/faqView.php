@@ -3,53 +3,178 @@ $title = 'FAQ';
 include('header.php')
 ?>
 
-<div class="container p-5">
-<h1>Service d'aide</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+    <div class="container my-5">
 
-  <h2>Premier pas</h2>  
-    <h3>Qu'est ce que Kornflix?</h3>
-      <p>Streaming Kornflix
-         Kornflix est un service de diffusion en streaming qui permet à ses membres de regarder une grande variété de séries TV, films, documentaires, etc. sur des milliers d'appareils connectés à Internet. Avec Kornflix, vous pouvez regarder un nombre illimité de titres, sans aucune publicité. Nous proposons sans cesse des nouveautés et, tous les mois, de nouveaux films et séries TV.</p>
-      <p>Si vous êtes déjà utilisateur de Kornflix et souhaitez savoir mieux utiliser nos services, consultez Premiers pas        avec Kornflix.</p>
+        <style>
+          .w-10 {
+            width: 3rem
+          }
+        </style>
+      
+        <!--Section: Content-->
+        <section class="">
+      
+          <h6 class="font-weight-normal text-uppercase font-small grey-text mb-4 text-center">FAQ</h6>
+          <!-- Section heading -->
+          <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">Service d'aide</h3>
+          <hr class="w-10">
+          <!-- Section description -->
+          <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">Got a question? We've got answers. If you have some other questions, see our support center.</p>
+      
+          <section class="row">
+            <section class="col-md-12 col-lg-10 mx-auto">
+            
+              <!--Accordion wrapper-->
+              <section class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+      
+                <!-- Accordion card -->
+                <section class="card border-top border-bottom-0 border-left border-right border-light">
+      
+                  <!-- Card header -->
+                  <section class="card-header bg-color border-bottom border-light" role="tab" id="headingOne1">
+                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                      aria-controls="collapseOne1">
+                      <h5 class="black-text font-weight-normal mb-0">
+                          Qu'est ce que Kornflix?<i class="fas fa-angle-down rotate-icon"></i>
+                      </h5>
+                    </a>
+                  </section>
+      
+                  <!-- Card body -->
+                  <section id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                    data-parent="#accordionEx">
+                    <section class="card-body bg-color">
+                        Streaming Kornflix Kornflix est un service de diffusion en streaming qui permet à ses membres 
+                        de regarder une grande variété de séries TV, films, documentaires, etc. 
+                        sur des milliers d'appareils connectés à Internet. Avec Kornflix, 
+                        vous pouvez regarder un nombre illimité de titres, sans aucune publicité. 
+                        Nous proposons sans cesse des nouveautés et, tous les mois, 
+                        de nouveaux films et séries TV.
+                        Si vous êtes déjà utilisateur de Kornflix et souhaitez savoir mieux 
+                        utiliser nos services, consultez Premiers pas avec Kornflix.
+                    </section>
+                  </section>
+      
+                </section>
+                <!-- Accordion card -->
+      
+                <!-- Accordion card -->
+                <section class="card border-bottom-0 border-left border-right border-light">
+      
+                  <!-- Card header -->
+                  <section class="card-header bg-color border-bottom border-light" role="tab" id="headingTwo2">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                      aria-expanded="false" aria-controls="collapseTwo2">
+                      <h5 class="black-text font-weight-normal mb-0">
+                          Facturation et paiement<i class="fas fa-angle-down rotate-icon"></i>
+                      </h5>
+                    </a>
+                  </section>
+      
+                  <!-- Card body -->
+                  <sectionid="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                    data-parent="#accordionEx">
+                    <section class="card-body bg-color">
+                        Kornflix est un service d'abonnement prépayé permettant de regarder un nombre illimité de séries TV 
+                        et de films sur tous vos appareils (ordinateurs portables, téléviseurs, téléphones et tablettes). 
+                        Les abonnés Kornflix sont prélevés automatiquement tous les mois, 
+                        à la date à laquelle ils se sont inscrits. Lisez ce qui suit pour en savoir plus sur 
+                        le prix des abonnements Kornflix, les modes de paiement, les frais, etc.
 
-    <h3>Facturation et paiement</h3>   
-      <p>Kornflix est un service d'abonnement prépayé permettant de regarder un nombre illimité de séries TV et de films sur      tous vos appareils (ordinateurs portables, téléviseurs, téléphones et tablettes). Les abonnés Kornflix sont prélevés     automatiquement tous les mois, à la date à laquelle ils se sont inscrits. Lisez ce qui suit pour en savoir plus sur     le prix des abonnements Kornflix, les modes de paiement, les frais, etc.  </p>
-      <p>Si vous êtes un nouvel utilisateur de Kornflix et souhaitez en savoir plus sur notre service, consultez l'article        Premiers pas avec Kornflix.</p>
+                        Si vous êtes un nouvel utilisateur de Kornflix et souhaitez en savoir plus sur notre service, consultez l'article Premiers pas avec Kornfli
+                    </section>
+                  </section>
+      
+                </section>
+                <!-- Accordion card -->
+      
+                <!-- Accordion card -->
+                <section class="card border-bottom-0 border-left border-right border-light">
+      
+                  <!-- Card header -->
+                  <section class="card-header bg-color border-bottom border-light" role="tab" id="headingThree3">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                      aria-expanded="false" aria-controls="collapseThree3">
+                      <h5 class="black-text font-weight-normal mb-0">
+                          J'ai des problème d'images lorsque j'essaie de regarder Kornflix
+                          <i class="fas fa-angle-down rotate-icon"></i>
+                      </h5>
+                    </a>
+                  </section>
+      
+                  <!-- Card body -->
+                  <section id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                    data-parent="#accordionEx">
+                    <section class="card-body bg-color">
+                        Si Kornflix ne fonctionne pas, le problème peut venir de la connectivité réseau, de l'appareil,
+                        ou de votre application ou compte Kornflix.
+                        Pour pouvoir retrouver le service de streaming, 
+                        vérifiez si vous voyez un code ou un message d'erreur à l'écran et saisissez-le dans 
+                        la barre de recherche dessous. Si aucun code ou message d'erreur n'est associé à votre problème,
+                        effectuez une recherche en décrivant celui-ci, par exemple "je vois un écran noir" ou "je n'arrive pas à m'identifier".
+                        
+                    </section>
+                  </section>
+      
+                </section>
+                <!-- Accordion card -->
+                
+                <!-- Accordion card -->
+                <section class="card border-left border-right border-light">
+      
+                  <!-- Card header -->
+                  <section class="card-header bg-color border-bottom border-light" role="tab" id="headingThree4">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree4"
+                      aria-expanded="false" aria-controls="collapseThree4">
+                      <h5 class="black-text font-weight-normal mb-0">
+                          Je ne parviens pas à m'Identifier <i class="fas fa-angle-down rotate-icon"></i>
+                      </h5>
+                    </a>
+                  </section>
+      
+                  <!-- Card body -->
+                  <section id="collapseThree4" class="collapse" role="tabpanel" aria-labelledby="headingThree4"
+                    data-parent="#accordionEx">
+                    <section class="card-body bg-color">
+                        Si vous n'arrivez pas à vous identifier sur votre compte Kornflix, 
+                        cela signifie généralement que votre dernière tentative de connexion ne s'est pas terminée correctement 
+                        ou que des informations d'un compte inactif sont enregistrées sur votre appareil. Suivez les étapes de résolution 
+                        indiquées ci-dessous pour remédier au problème.
 
-  <h2>Lecture impossible</h2>
-    <h3>J'ai des problème d'images lorsque j'essaie de regarder Kornflix</h3>
-      <p>Si Kornflix ne fonctionne pas, le problème peut venir de la connectivité réseau, de l'appareil, ou de votre               application ou compte Kornflix.</p>
-      <p>Pour pouvoir retrouver le service de streaming, vérifiez si vous voyez un code ou un message d'erreur à l'écran et      saisissez-le dans la barre de recherche dessous. Si aucun code ou message d'erreur n'est associé à votre problème,      effectuez une recherche en décrivant celui-ci, par exemple "je vois un écran noir" ou "je n'arrive pas à                m'identifier".</p>
-
-  <h2>Gerer mon compte</h2>
-    <h3>Je ne parviens pas à m'Identifier</h3>
-      <p>Si vous n'arrivez pas à vous identifier sur votre compte Kornflix, cela signifie généralement que votre dernière         tentative de connexion ne s'est pas terminée correctement ou que des informations d'un compte inactif sont              enregistrées sur votre appareil. Suivez les étapes de résolution indiquées ci-dessous pour remédier au problème.
-      <p>Si vous avez oublié votre adresse e-mail ou votre mot de passe, ou si vous n'y avez plus accès, consultez l'article     J'ai oublié mon identifiant ou mon mot de passe Kornflix pour réinitialiser les informations de votre compte et          récupérer l'accès à celui-ci.</p>
-
-    <h3>Comment fonctionnent les profils sur mon compte Kornflix</h3>
-      <p>Le profil permet aux différents membres de votre foyer d'avoir leur propre expérience Kornflix personnalisée, définie    en fonction de leurs films et séries TV préférés. Un compte Kornflix peut comporter jusqu'à cinq profils                 individuels.</p>
-
-    <h3>Comment configurer le contrôle parental sur mon compte Kornflix ?</h3>
-      <p>En tant que titulaire principal du compte, vous pouvez configurer le contrôle parental sur votre compte de deux         façons :</p>
-      <p>1. Par compte (contrôle élevé)</p>
-      <p>Demander un code PIN pour accéder à certaines catégories d'âge</p>
-      <p>Définissez un code PIN à quatre chiffres devant être saisi pour visionner tout contenu dépassant la catégorie d'âge     autorisée, quel que soit le profil. Le code PIN empêche votre enfant de regarder des titres non adaptés à la            catégorie d'âge sélectionnée.</p>
-      <p>Demander un code PIN pour accéder à des séries TV ou des films spécifiques</p>
-      <p>Définissez un code PIN à quatre chiffres devant être saisi pour visionner une série TV ou un film spécifique, quel      que soit le profil. Le code PIN empêche votre enfant de regarder ces séries TV ou ces films.</p>
-      <p>2. Par profil (contrôle modéré)</p>
-      <p>Choisissez la catégorie d'âge associée à un profil</p>
-      <p>Définissez une catégorie d'âge associée à un profil spécifique de manière à contrôler les films et séries TV            auxquels il peut accéder. C'est à vous, le parent ou tuteur, de vous assurer que votre enfant utilise uniquement le     profil adapté.</p>
-
-  <h2>Regarder Kornflix</h2>
-    <h3>Comment trouver des séries TV et des films sur Kornflix ?</h3>
-      <p>Kornflix fait appel à diverses méthodes pour vous aider à trouver des séries TV et des films que vous apprécierez.       Vous pouvez ainsi consulter les sections de recommandations, effectuer une recherche ou parcourir les différentes       catégories.</p>
-      <p>Vous ne parvenez toujours pas à trouver la série TV ou le film que vous recherchez ? Des suggestions concernant une     série TV ou un film ? Suggérez des séries TV ou des films en ligne !</p>
-    <h3>Téléchargement de films et de séries TV sur Kornflix</h3>
-      <p>Vous pouvez télécharger certains titres pour les regarder ultérieurement hors ligne. Le nombre maximal d'écrans         disponibles en simultané n'en sera pas impacté. Les titres téléchargés sont disponibles uniquement sur l'appareil       sur lequel ils sont téléchargés.</p>
-      <p>La fonctionnalité de téléchargement est disponible sur les appareils répondant aux critères indiqués ci-dessous.        Elle n'est pas prise en charge sur les navigateurs d'ordinateur.</p>
-    <h3>Comment activer/désactiver les sous-titres, le sous-titrage pour sourds et malentendants et l'audio dans une autre langue ?</h3>
-
-</div>
+                        Si vous avez oublié votre adresse e-mail ou votre mot de passe, 
+                        ou si vous n'y avez plus accès, consultez l'article J'ai oublié mon identifiant 
+                        ou mon mot de passe Kornflix pour réinitialiser les informations de votre compte et récupérer l'accès à celui-ci.    
+                    </section>
+                  </section>
+      
+                </section>
+                <!-- Accordion card -->
+      
+              </section>
+              <!-- Accordion wrapper -->
+              
+              
+            </section>
+          </section>
+      
+        </section>
+        
+      </section>
+</body>
+</html>
 <?php
 include('footer.php')
 ?>
