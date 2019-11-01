@@ -2,7 +2,7 @@
 $title = 'Category';
 include('header.php')
 ?>
-<h1 class="container pt-3 pb-1">Movies category</h1>
+<h1 class=" pt-3 pb-1" style="padding:3%; text-align:center; background-color:black">Movies category</h1>
 <hr class="container">
 <div class="container">
 <section id='category' class="d-flex flex-wrap justify-content-between "></section>

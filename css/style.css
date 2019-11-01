@@ -52,13 +52,13 @@ footer>ul {
   margin: auto;
   
 }
-.navmenu{
+/*.navmenu{
   margin-left:-12%;
 }
 
 .form-inline{
   margin-right:-2%;
-}
+}*/
 a {
   color: inherit;
 }
@@ -112,6 +112,8 @@ img {
 
 }
 
+
+
 .jumbotron {
   position: absolute;
   background-color: white;
@@ -150,4 +152,8 @@ img {
 .comInput {
   width: 100%;
   border-radius: 5px;
+}
+.categ{
+  margin-bottom: 2%;
+  box-shadow: 9px 9px 9px -4px rgb(46, 0, 0);
 }

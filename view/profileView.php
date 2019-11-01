@@ -1,5 +1,5 @@
 <?php
-  $title = 'Contact-us';
+  $title = 'Profile';
   include('header.php');
 ?>
 <?php
@@ -15,7 +15,7 @@
     <hr>
     <img src="<?php if($row['avatar']!= ""){ echo $row["avatar"];}else{echo "./avatar/defaultAvatar.png";}?>" alt="avatar profile" class="rounded-circle">
      
-    <ul>
+    <ul style="list-style-type: none">
       <li class="profile">
         username : <?= $row['username'];?>
       </li>
