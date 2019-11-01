@@ -13,7 +13,7 @@ include('header.php');
   
   <div class="form-group "  >
     <label for="username">Enter your username</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="username">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" name="username">
   </div>
   <div class="form-group ">
     <label for="password">Password</label>

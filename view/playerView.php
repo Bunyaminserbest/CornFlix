@@ -4,7 +4,7 @@ include('header.php');
 
 ?>
 
-<H1>PLAYER Film <?=$_GET['id']?></H1>
+<H1 id="title" style="padding:3%; text-align:center; background-color:black"></H1>
 <div id="player" class="container"></div>
 
 
@@ -47,10 +47,11 @@ console.log(movieId)
 fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US`)
     .then(response => response.json())
     .then(data=> {
-      
       showTrailer(data.results)
+      document.getElementById("title").innerHTML = data.results[0].name
     })
     function showTrailer(movie){
+        console.log(movie[0].name)
         document.getElementById("player").innerHTML += `<iframe width="100%" height="600px" src="http://www.youtube.com/embed/${movie[0].key}"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         
     }

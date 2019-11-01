@@ -3,7 +3,7 @@ $title = 'Player Series';
 include('header.php')
 ?>
 
-<H1>PLAYER Film <?=$_GET['id']?></H1>
+<H1 id="title" style="padding:3%; text-align:center; background-color:black"></H1>
 <div id="player">Hello</div>
 <div id="comments"></div>
 <div id="user"></div>
@@ -46,7 +46,7 @@ console.log(serieId)
 fetch(`https://api.themoviedb.org/3/tv/${serieId}/videos?api_key=a85ec5f726223d34a1135bd216c3bd56&language=en-US`)
     .then(response => response.json())
     .then(data=> {
-      
+        document.getElementById("title").innerHTML = data.results[0].name
       showTrailer(data.results)
     })
     function showTrailer(serie){

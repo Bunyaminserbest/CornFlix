@@ -225,7 +225,7 @@ include('header.php');
     function showCategory(movies, nbrToShow, category){
       for (i=0; i<nbrToShow; i++){
         
-      document.getElementById(`${category}`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}"></a>`
+      document.getElementById(`${category}`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" alt="id=${movies[i].title}"></a>`
       }
     };
 getCategory(28,5,"action")

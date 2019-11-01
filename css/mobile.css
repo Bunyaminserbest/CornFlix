@@ -1,0 +1,28 @@
+@media screen and (max-width : 420px) {
+  
+#logoo{
+    text-align: center;
+}
+.container{
+    width:50%;
+}
+.navbarStyle {
+    justify-content: flex-end;
+}
+#search{
+    justify-content: center;
+}
+#searchBtn {
+    width:100%;
+}
+.form-inline .form-control {
+    display: inline-block;
+     width: 100%;
+}
+@media screen and (max-width : 1000px) {
+    #searchBtn{
+        width:100%;
+}
+#logoo{
+    text-align: center;
+}
