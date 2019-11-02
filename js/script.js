@@ -23,7 +23,7 @@ function getapi(url) {
     })
   function getPoster(movies, nbrToShow) {
     for (i = 0; i < nbrToShow; i++) {
-      document.getElementById('category').innerHTML += `<a class="categ" href="./index.php?action=player&id=${movies[i].id}"><img id= "poster${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+      document.getElementById('category').innerHTML += `<a class="categ" href="./index.php?action=player&id=${movies[i].id}"><img class="poster" id= "poster${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
     }
   }
 }
@@ -37,7 +37,7 @@ function getapiSerie(url) {
     })
   function getPoster(movies, nbrToShow) {
     for (i = 0; i < nbrToShow; i++) {
-      document.getElementById('category').innerHTML += `<a class="categ" href="./index.php?action=playerSeries&id=${movies[i].id}"><img id= "poster${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+      document.getElementById('category').innerHTML += `<a class="categ" href="./index.php?action=playerSeries&id=${movies[i].id}"><img class="poster" id= "poster${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
     }
   }
 }

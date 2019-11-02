@@ -94,11 +94,11 @@ hr {
 
 }
 
-img {
+
+.poster{
   height: 280px;
   width: 204px;
 }
-
 
 .logo {
   width: 50% !important;
