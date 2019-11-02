@@ -157,3 +157,7 @@ img {
   margin-bottom: 2%;
   box-shadow: 9px 9px 9px -4px rgb(46, 0, 0);
 }
+.profileBtn{
+  background-color: #CC0501;
+  color:white;
+}
