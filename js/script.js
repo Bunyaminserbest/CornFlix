@@ -18,7 +18,7 @@ function getapi(url) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
+      
       getPoster(data.results, 20)
     })
   function getPoster(movies, nbrToShow) {
@@ -32,7 +32,7 @@ function getapiSerie(url) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
+      
       getPoster(data.results, 20)
     })
   function getPoster(movies, nbrToShow) {

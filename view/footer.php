@@ -5,13 +5,13 @@
 
   <ul class="d-flex navUl">
     <li class="navLi">
-      <a href=""><i class="fab fa-facebook-square fa-2x  "></i></a>
+      <a href="https://www.facebook.com/getlostexperience/"><i class="fab fa-facebook-square fa-2x  "></i></a>
     </li>
     <li class="navLi">
-      <a href=""><i class="fab fa-twitter-square fa-2x"></i></a>
+      <a href="https://twitter.com/Phrases2JuL"><i class="fab fa-twitter-square fa-2x"></i></a>
     </li>
     <li class="navLi">
-    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://www.instagram.com/explore/tags/getlost/"><i class="fab fa-instagram fa-2x"></i></a>
     </li>
   </ul>
 
