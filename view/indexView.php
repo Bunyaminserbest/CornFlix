@@ -178,13 +178,13 @@ include('header.php');
     function getMovie(movies){
       for(i=0; i<20; i++){
         if (i<5){
-            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+            document.getElementById(`movie1`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img class="poster" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
           }else if (i<10){
-            document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+            document.getElementById(`movie2`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img class="poster" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
           }else if(i<15){
-            document.getElementById(`movie3`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+            document.getElementById(`movie3`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img class="poster" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
           }else{
-          document.getElementById(`movie4`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+          document.getElementById(`movie4`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img class="poster" id="post${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }
       }
        
@@ -201,13 +201,13 @@ include('header.php');
     function getTvshow(movies){
       for(i=0; i<20; i++){
         if (i<5){
-          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+          document.getElementById(`tvShow1`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img class="poster" id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }else if (i<10){
-          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+          document.getElementById(`tvShow2`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img class="poster" id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }else if(i<15){
-          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+          document.getElementById(`tvShow3`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img class="poster" id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }else{
-          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
+          document.getElementById(`tvShow4`).innerHTML += `<a href="./index.php?action=playerSeries&id=${movies[i].id}"><img class="poster" id="tv${i}" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" class="d-block" alt="${movies[i].title}"></a>`
         }
       }
     }
@@ -225,7 +225,7 @@ include('header.php');
     function showCategory(movies, nbrToShow, category){
       for (i=0; i<nbrToShow; i++){
         
-      document.getElementById(`${category}`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" alt="id=${movies[i].title}"></a>`
+      document.getElementById(`${category}`).innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img class="poster" id=${category+i} src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}" alt="id=${movies[i].title}"></a>`
       }
     };
 getCategory(28,5,"action")

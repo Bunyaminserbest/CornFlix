@@ -87,9 +87,7 @@
      <button style="color:grey;" type="button" class="btn  dropdown-toggle col-md-1" data-toggle="dropdown" ><i class="fas fa-user fa-2x" ></i></a>
      </button>
      <div class="dropdown-menu col-md-2 text-center DDM">
-      <a class="dropdown-item" href="./index.php?action=login">Sign-in</a>
       <a class="dropdown-item" href="./index.php?action=profil&id='.$_SESSION['user_id'].'">My profil</a>
-      <a class="dropdown-item" href="#">My list</a>
       <a class="dropdown-item" href="./view/logout.php">Logout</a>
     </div>
 
