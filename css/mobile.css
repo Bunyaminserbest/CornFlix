@@ -19,6 +19,11 @@
     display: inline-block;
      width: 100%;
 }
+.avatar{
+    display: flex !important;
+    flex-direction: column !important;
+    width:100% !important;
+}
 }
 @media screen and (max-width : 1000px) {
     #searchBtn{
