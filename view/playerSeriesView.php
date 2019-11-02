@@ -23,6 +23,7 @@ while ($data = $comments->fetch())
 <div>
 <div class="d-flex align-items-baseline">
     <h3><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
+    <em> le <?= $data['comment_date_fr']; ?></em>
 </div>
     <p><?=nl2br(htmlspecialchars($data['comment']));} ?></p>
 </div>

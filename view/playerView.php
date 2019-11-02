@@ -22,8 +22,12 @@ while ($data = $comments->fetch())
 <div>
 <div class="d-flex align-items-baseline">
     <h3 class="mr-2"><?=nl2br(htmlspecialchars($data['username'])); ?></h3>
+    <em> le <?= $data['comment_date_fr']; ?></em>
 </div>
-    <p><?=nl2br(htmlspecialchars($data['comment']));} ?></p>
+    <p><?=nl2br(htmlspecialchars($data['comment']));} ?>
+    
+    
+</p>
 </div>
 
 <form action="index.php?action=addComment&id=<?= $_GET['id'] ?>" method="post" class="inputComsForm">

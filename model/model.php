@@ -52,7 +52,7 @@ function contactSql($data)
 function getComments($id_movie)
 {
     $db = connect_db();
-    $comments = $db->prepare('SELECT id, username, comment, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comment WHERE id_movie = ? ORDER BY date DESC');
+    $comments = $db->prepare('SELECT id, username, comment, DATE_FORMAT(date, \'%d/%m/%Y\') AS comment_date_fr FROM comment WHERE id_movie = ? ORDER BY date DESC');
     $comments->execute(array($id_movie));
     //var_dump($id_movie);
     //var_dump($comments);
