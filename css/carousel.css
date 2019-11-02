@@ -1,0 +1,42 @@
+img{
+padding: 1%;
+}
+
+/*.carousel-items{
+      justify-content: center;
+}*/
+
+.test {
+      position: relative;
+      float: left;
+      margin-right: -100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: -webkit-transform .6s ease-in-out;
+      transition: transform .6s ease-in-out;
+      transition: transform .6s ease-in-out, -webkit-transform .6s;
+}
+/*CAROUSEL*/
+.carousel-item.active {
+      display: flex;
+
+}
+
+.carousel-inner>div {
+      justify-content: center;
+}
+.carousel-item>div>a{
+      padding:1%;
+      
+}
+
+.section {
+      display: flex;
+      flex-direction: column;
+}
+
+.genres {
+      justify-content: center;
+}
+
+

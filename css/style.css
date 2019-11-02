@@ -1,0 +1,159 @@
+body {
+  background-color: #4A0100 !important;
+  color: white !important;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.bg-color {
+  background-color: #4A0100;
+}
+
+.search {
+  color: white !important;
+  background-color: rgb(46, 0, 0) !important;
+  border-color: #4A0100;
+
+}
+
+.searchBtn {
+  height: 37px;
+  color: white;
+  background-color: #CC0501;
+  border: 1px solid #CC0501;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+.submitBtn {
+  color: white;
+  background-color: #CC0501;
+  padding: 10px 88px !important;
+}
+
+.footerBgrd {
+  background-color: rgb(46, 0, 0);
+}
+
+footer>ul {
+  justify-content: space-between;
+
+}
+
+.navLi {
+  list-style: none;
+  font-size: small;
+}
+
+.navUl {
+  width: 50%;
+  margin: auto;
+  
+}
+/*.navmenu{
+  margin-left:-12%;
+}
+
+.form-inline{
+  margin-right:-2%;
+}*/
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #CC0501;
+  text-decoration: none;
+}
+
+.hgtTxtArea {
+  height: 150px;
+}
+
+.btn-nav {
+  color: white;
+  background-color: #CC0501;
+  padding: 5px 50px !important;
+  margin: 0px 10px;
+}
+
+.navbarStyle {
+  background-color: rgb(46, 0, 0) !important;
+}
+
+hr {
+  color: black;
+  font-size: bolder;
+}
+
+.lpBg {
+  width: 100%;
+  height: 100%;
+
+}
+
+img {
+  height: 280px;
+  width: 204px;
+}
+
+.logo {
+  width: 50% !important;
+  height: 50% !important;
+}
+
+@media screen and (min-width : 700px) {
+
+  .DDM {
+    left: -100%;
+  }
+
+}
+
+
+
+.jumbotron {
+  position: absolute;
+  background-color: white;
+  top: 25%;
+  left: 33%;
+  width: 400px;
+  height: 300px;
+  opacity: 0.6;
+}
+
+.lpBg {
+  position: relative;
+  width: 100%;
+  height: 79vh;
+}
+
+
+
+  #carouselMovies{
+    justify-content: center;
+    margin:auto;
+  }
+  
+
+
+
+
+.inputComsForm {
+  padding: 10px;
+  border: 1px solid rgb(46, 0, 0);
+  background-color: rgb(46, 0, 0);
+  border-radius: 5px;
+
+}
+
+.comInput {
+  width: 100%;
+  border-radius: 5px;
+}
+.categ{
+  margin-bottom: 2%;
+  box-shadow: 9px 9px 9px -4px rgb(46, 0, 0);
+}
