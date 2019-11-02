@@ -44,7 +44,7 @@ fetch(url)
         
         for (i=0; i<nbrToShow; i++){
         
-        document.getElementById("movie").innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}"></a>`
+        document.getElementById("movie").innerHTML += `<a href="./index.php?action=player&id=${movies[i].id}"><img class="poster" src="https://image.tmdb.org/t/p/w200/${movies[i].poster_path}"></a>`
         }
     }}
     getSearch(query, url)
