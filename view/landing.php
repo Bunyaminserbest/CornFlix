@@ -8,7 +8,7 @@ include('header.php');
   <img src="./bgLandingP2.jpg" alt="" class="lpBg">
 </div>
 <div>
-<div class="jumbotron"></div>
+
 
 </div>
 
