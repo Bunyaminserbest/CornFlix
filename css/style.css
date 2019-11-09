@@ -25,7 +25,15 @@ body {
   border-radius: 5px;
   font-weight: bold;
 }
-
+.panierBtn {
+  height: 37px;
+  color: white;
+  background-color: #CC0501;
+  border: 1px solid #CC0501;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+}
 
 .submitBtn {
   color: white;
@@ -138,7 +146,9 @@ hr {
     margin:auto;
   }
   
-
+#carousel-inner{
+  z-index: -10;
+}
 
 
 
@@ -161,4 +171,113 @@ hr {
 .profileBtn{
   background-color: #CC0501;
   color:white;
+}
+
+/* POPUP */
+
+.overlay {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.7);
+transition: opacity 500ms;
+visibility: hidden;
+opacity: 0;
+}
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+
+.popup {
+margin: 70px auto;
+padding: 20px;
+background: rgb(197, 195, 195);
+border-radius: 5px;
+width: 70%;
+position: relative;
+transition: all 5s ease-in-out;
+}
+#popup1{
+  z-index: 10;
+}
+.popup h2 {
+margin-top: 0;
+color: #333;
+font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup ul {
+padding: 10px !important;
+min-height: 100%;
+max-height: 800px;
+}
+.popup .close {
+position: absolute;
+top: 20px;
+right: 30px;
+transition: all 200ms;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color: #333;
+}
+.popup .close:hover {
+color: red;
+}
+.popup .content {
+max-height: 30%;
+overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+.box{
+width: 70%;
+}
+.popup{
+width: 70%;
+}
+}
+img {
+  width: 40px;
+  padding-bottom: 1%;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.achat{
+  text-align: center;
+  width: 50%;
+}
+.panier{
+  width: 50%;
+}
+.achat input{
+  margin-bottom: 10px;
+}
+.qt{
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 40px;
+}
+.facture{
+  display: flex;
+  flex-direction: row;
+}
+#frais {
+  font-size: 10px;
+}
+.containerprix{
+  text-align: center;
+  background-color: #2e0500;
+  width: 50%;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 3%;
+  padding: 2%;
+  border: solid 2px white;
 }

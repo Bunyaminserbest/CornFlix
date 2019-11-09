@@ -1,0 +1,119 @@
+Envoie vers DB
+<?php $db = new PDO('mysql:host=localhost;dbname=a70j0_bdd_ehanon', 'root', ''); 
+    $pdoStat = $db->prepare('INSERT INTO shoppingcart VALUES (NULL, :id_user, :id_movie)');
+    $pdoStat -> bindValue(':id_user', $_SESSION['user_id'], PDO::PARAM_STR);
+    $pdoStat -> bindValue(':id_movie', $_GET['id'], PDO::PARAM_STR);
+    $insertIsOk = $pdoStat->execute();
+    ?>
+
+
+    <?php 
+$title = 'Web Shop';
+include('header.php')
+?>
+<?php 
+$db = new PDO('mysql:host=localhost;dbname=a70j0_bdd_ehanon', 'root', '');
+var_dump($_SESSION['panier']);
+if(isset($_COOKIE['poster'])){
+    echo $_COOKIE['poster'];
+}
+?>
+
+ function showPic(data){
+        for(i=0; i< <?php sizeof($_SESSION['panier']) ?>; i++){
+        const li = document.createElement('li')
+        const img = document.createElement('img')
+        const quantite = document.createElement('input')
+        const buttons = document.createElement('button')
+        quantite.setAttribute("type","number")
+        quantite.setAttribute("class","qt")
+        quantite.setAttribute("min","1")
+        quantite.setAttribute("max","10")
+        buttons.setAttribute("class","btn btn-danger fa fa-trash")
+        img.src = 'https://image.tmdb.org/t/p/w200/'+data.poster_path;
+        commandlist.appendChild(li)
+        li.appendChild(img)
+        li.appendChild(quantite)
+        li.appendChild(buttons)
+    }
+    }
+
+      var list = <?= json_encode($_SESSION['panier']); ?>;
+    const ajout = document.querySelector('.panierBtn');
+    const commandlist = document.querySelector('#commandlist');
+
+
+    xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "gethint.php?q="+str, true);
+        xmlhttp.send();
+
+        
+    ajout.onclick = function(id){
+        fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US")
+        .then(response => response.json())
+        .then(data=> {
+        showPic(data)
+    })
+    }
+    
+
+
+/* CALCS */
+/* var_dump($prixCode); */
+$prixTotal=0;
+$prixQty = 0;
+$prixCode = 0;
+
+/* if promo code empty */
+if($_POST['promo'] != 'MikeEstTropCool') {
+    if ($_POST['quantiter'] < 5) {
+        /* delivery */
+        $prixTotal = $_POST['quantiter'] *10 + $_POST['payslist'];
+        echo "Total price of your order is: " . $prixTotal. " euro";
+    }else {
+       /* quantity */
+       $prixTotal = $_POST['quantiter'] *10 + $_POST['payslist'];
+        echo  "<br> Total price of your order is: " .$prixQty = $prixTotal - ($prixTotal *0.05) . " euro";
+    }
+/* if promo code */
+} else {
+    if(($_POST['promo'] === 'MikeEstTropCool') AND ($_POST['payslist'] == 0)) {
+        $prixTotal = $_POST['quantiter'] *10 + $_POST['payslist'];
+        $prixQty = $prixTotal - ($prixTotal *0.05) ; 
+        echo "<br> Total price of your order is: ". $prixCode= $prixQty -($prixQty*0.15). " euro";
+    }else{
+        $prixTotal = $_POST['quantiter'] *10 + $_POST['payslist'];
+        $prixQty = $prixTotal - ($prixTotal *0.05) ; 
+        echo "<br> Total price of your order is: ". $prixCode= $prixQty -($prixQty*0.10) . " euro";
+    }
+}
+
+
+
+
+
+
+
+<table>
+  <tr>
+    <th>Film</th> 
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Delivery</th>
+  </tr>
+  <tr>
+  <?php
+  $i=0;
+  foreach($test as $row){?>
+             <td><?= $_POST["id_movie".$i];?></td>
+  
+        <?php
+        $i++;}
+        ?>
+
+  </tr>
+</table>
