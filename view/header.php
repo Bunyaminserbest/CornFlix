@@ -4,11 +4,8 @@
   $id = $_SESSION['user_id'];
   $sql = "SELECT * FROM shoppingcart WHERE id_user=$id";
   $pdoStat = $db->query($sql);
-  
   $result = $pdoStat->fetchAll();
 
- 
- 
 ?>
 <!DOCTYPE html>
 <html lang="en">

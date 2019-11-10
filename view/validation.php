@@ -1,6 +1,5 @@
 <?php
 include("header.php");
-
 /* var_dump($prixCode); */
 $prixTotal=0;
 $prixQty = 0;
