@@ -21,6 +21,10 @@ if ($user_id ) {
         comments();
     }else if($_GET['action'] == 'search'){
         require('./view/searchView.php');
+    }else if($_GET['action'] == 'cart'){
+        require('./view/cart.php');
+    }else if($_GET['action'] == 'validation'){
+        require('./view/validation.php');
     }
     
     elseif ($_GET['action'] == 'addComment') {
