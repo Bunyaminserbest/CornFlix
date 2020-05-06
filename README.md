@@ -11,7 +11,7 @@
   Kevin Ryckaert -> https://github.com/KevinRyckaert ;  
   
 # Quel type de projet ?
-  Dans le cadre de notre formation chez Becode,nous avans été amené à **réaliser un site de Streaming**.  
+  Dans le cadre de notre formation chez Becode,nous avons **réaliser un site de Streaming**.  
   Le but est d’afficher un catalogue de films, une navbar, un header, l'outil de recherches, différentes
   catégories de vidéos… Et rendre tout ceci **fonctionelle**.  
   Nous nous somme inspiré de différents sites streaming (comme Netflix,Primevideo,...) pour pouvoir le réaliser.
